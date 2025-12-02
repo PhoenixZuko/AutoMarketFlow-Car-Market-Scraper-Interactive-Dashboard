@@ -1,7 +1,70 @@
+
+Video & Tutorials
+Full presentation (overview of the project + features + workflow):
+https://www.youtube.com/watch?v=r5iQPuOCLUc
+Quick usage guide (how to configure location and price filters via YAML):
+https://www.youtube.com/watch?v=ir-ZJZGxOIQ
+
+
+
+📝 Project Overview & Technical Background
+
+This application was developed for a small automotive company that specialized in sourcing and reselling used vehicles. A core part of their workflow involved monitoring online marketplaces and identifying valuable listings quickly and accurately. To support this process, a dedicated automation system was designed to run locally on the client’s workstation, ensuring both performance and data privacy.
+
+The solution integrates several controlled components working together as a unified flow:
+
+✔ Local-Only Execution (No Cloud Dependencies)
+
+The entire system operates on the user’s laptop, using a controlled Chrome profile, local storage, and a custom dashboard.
+This eliminates external dependencies and ensures predictable performance in a closed environment.
+
+✔ Automated Browser-Based Workflow
+
+A Selenium-driven engine handles real-time interaction with Facebook Marketplace, including:
+navigation through categories
+setting filters (location, radius, price, etc.)
+scrolling and dynamic content loading
+extracting listing details
+monitoring page state and detecting UI changes
+All actions remain fully visible in the browser, as requested by the client.
+
+✔ Interactive Dashboard & Control Panel
+
+A custom local dashboard provides:
+manual control (Start / Stop Automation)
+configuration inputs (keywords, filters, thresholds)
+active status monitoring
+live listing view with sorting and filtering
+The dashboard communicates with the automation engine through local processes, enabling safe and synchronized control.
+
+✔ Text Processing & Semantic Analysis
+A built-in analysis module evaluates each listing using:
+positive keyword detection (clean title, good condition, new tires, etc.)
+price and mileage validation
+anomaly scoring
+These heuristics help isolate the most relevant vehicle listings for the client's business needs.
+
+✔ Process Monitoring & Safe Execution
+
+Because the program needed to run alongside other business applications, the system includes safeguards for:
+tracking active process IDs
+preventing interference with unrelated software
+controlled shutdown of only the automation-related instances
+persistent Chrome session handling (login saved locally)
+This ensures robust operation even during prolonged or repeated use.
+
+✔ Windows 11 Optimized
+
+The solution was developed, tested, and validated exclusively on Windows 11, ensuring compatibility with:
+Chrome automation
+file system paths
+process management
+
+Python runtime and dependencies
+
+
 AutoMarketFlow – Car Market Scraper & Interactive Dashboard
-
 Automated vehicle marketplace analyzer for Facebook Marketplace & Craigslist
-
  Overview
 AutoMarketFlow is an automated workflow (not a high-speed scraper) designed to help users analyze vehicle listings from Facebook Marketplace and Craigslist.
 It provides:
@@ -17,6 +80,68 @@ It provides:
 ⚠️ This tool automates browser actions exactly like a human, respecting browser delays and avoiding aggressive scraping techniques.
 
 
+
+Quick Tutorial (YAML Configuration)
+A short tutorial explaining how to configure location and price range directly through the YAML settings is available here:
+
+Video & Tutorials
+Full presentation (overview of the project + features + workflow):
+https://www.youtube.com/watch?v=r5iQPuOCLUc
+Quick usage guide (how to configure location and price filters via YAML):
+https://www.youtube.com/watch?v=ir-ZJZGxOIQ
+
+The video shows only the essentials:
+
+
+Technical Overview
+
+AutoMarketFlow is built as a local automation and data-processing workflow.
+It combines controlled browser automation with an ETL-style pipeline and a lightweight backend that manages multiple processes safely.
+
+The system was designed specifically for Windows 11 and uses a persistent Chrome profile, a Flask dashboard, and a multi-stage extraction engine to analyze vehicle listings in real time.
+
+🔧 Core Capabilities (Short Technical Summary)
+
+ETL pipeline (Extract → Transform → Load)
+Browser automation through Selenium + ChromeDriver
+Process monitoring (PID tracking, safe shutdown)
+Local port-based separation (Flask UI on port 5000, automation isolated)
+Real-time dashboard for control, filters, and data browsing
+Keyword-based semantic analysis (positive/negative indicators)
+Owner detection + vehicle text classification
+Automatic environment setup through batch scripts
+Persistent login session using a dedicated Chrome profile
+Safe concurrent execution with other applications running on the same machine
+
+🛠 Technologies Used
+Backend & Automation
+
+Python 3.x
+Selenium WebDriver
+ChromeDriver
+Custom Chrome user-data profile
+Process / PID management
+Batch automation scripts (Windows .bat)
+
+Dashboard & UI
+Flask (local web server)
+HTML templates
+CSS (basic UI styling)
+JavaScript (interactive elements)
+Data Processing
+Custom ETL pipeline
+Regex-based text parsing
+Keyword classification engine
+JSON export module
+Deduplication + visited tracker
+File-based storage
+System Integration
+
+Windows 11 optimized execution
+Port binding (Flask on 5000)
+Automated dependency installation (pip)
+Safe start/stop orchestration
+Multi-process coordination
 
 
 Installation Video
