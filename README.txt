@@ -2,8 +2,7 @@ AutoMarketFlow – Car Market Scraper & Interactive Dashboard
 
 Automated vehicle marketplace analyzer for Facebook Marketplace & Craigslist
 
-📌 Overview
-
+ Overview
 AutoMarketFlow is an automated workflow (not a high-speed scraper) designed to help users analyze vehicle listings from Facebook Marketplace and Craigslist.
 It provides:
 
@@ -16,7 +15,6 @@ It provides:
 ✔ Zero technical skills required after installation
 
 ⚠️ This tool automates browser actions exactly like a human, respecting browser delays and avoiding aggressive scraping techniques.
-
 
 
 
@@ -73,7 +71,6 @@ From now on, running the main program will not require login again.
 Once installed, simply run:
 
 START_CLICK_HERE.bat
-
 The app will:
 Load your saved Facebook session
 Open the dashboard
@@ -97,22 +94,17 @@ Stores results without duplicates
 ✔ Advanced text analysis
 
 Owner count detection
-
 Positive keywords scan
-
 Auto-cleaning of spam or repetitive text
 
 ✔ Beautiful interactive dashboard
 
 Filters by price, mileage, owners, keywords
-
 Color-coded listings
-
 Embedded image previews
 
 Export to JSON
-
-📁 Project Structure
+ Project Structure
 auto_marketflow/
 │
 ├── main.py                     # Entry point – automation workflow
@@ -151,7 +143,6 @@ auto_marketflow/
 
 This software automates browser actions exactly as a human user.
 It:
-
 ❌ does NOT bypass Facebook security
 ❌ does NOT gather private data
 ❌ does NOT access API endpoints
@@ -163,7 +154,6 @@ Usage is at your own responsibility.
 Make sure your use complies with platform terms and local laws.
 
 🤝 Contributing
-
 Pull requests and improvements are welcome.
 https://vorte.eu/contact
 📧 Support
