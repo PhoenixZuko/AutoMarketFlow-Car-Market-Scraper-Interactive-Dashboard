@@ -1,0 +1,137 @@
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+
+.modal-box {
+  background: rgb(63, 63, 66);
+  width: 60%;
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #d30603;
+  cursor: pointer;
+}
+
+.modal-content {
+  max-height: 450px;
+  overflow-y: auto;
+  font-size: 24px;
+  line-height: 1.6;
+  color: #ffffff;
+  padding: 15px;
+  background-color: #111111;
+  border-radius: 2px;
+}
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+    }
+    .page-title {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 2.5em;
+        color: #343a40;
+    }
+    .centered-table {
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+        width: 95%;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .centered-table th {
+        background-color: #343a40;
+        color: white;
+        padding: 10px;
+        font-size: 1em;
+    }
+    .centered-table td {
+        padding: 8px 12px;
+        text-align: center;
+        border: 1px solid #dee2e6;
+    }
+    .centered-table tr:hover {
+        background-color: #f1f1f1;
+    }
+    .expand-btn {
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #007bff;
+        text-decoration: underline;
+        font-size: 1em;
+    }
+    .hidden-row {
+        display: none;
+    }
+    .details-row td {
+        background-color: #f9f9f9;
+        font-size: 14px;
+        text-align: left;
+    }
+    .unknown {
+        color: #6c757d;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+    .active-row {
+        background-color: #cfcbcb;
+        color: #3409d0;
+        font-weight: bold;
+        border-left: 5px solid #c82333;
+    }
+    .active-btn {
+        color: #c82333;
+    }
+
+    th.col-small, td.col-small {
+  /* stil comun */
+}
+/* Pentru coloane scurte */
+.col-small {
+  width: 50px !important;
+  max-width: 40px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Pentru coloane cu cifre mai lungi */
+.col-medium {
+  width: 90px !important;
+  max-width: 90px;
+  text-align: center;
+  white-space: nowrap;
+}
+.dataTables_length,
+.dataTables_filter,
+.dataTables_info,
+.dataTables_paginate {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}

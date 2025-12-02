@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cars Dashboard</title>
+  <link href="{{ url_for('static', filename='media/css/tabulator.min.css') }}" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+    }
+    #header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 0 40px;
+    }
+    #filters {
+      background-color: #000;  /* negru */
+      padding: 10px 15px;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px; /* spațiu între grupuri */
+      justify-content: flex-start;
+      max-width: 1600px; /* sau cât dorești */
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+    
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      min-width: 150px;  /* lățime minimă pentru fiecare grup */
+    }
+    
+    .filter-group label {
+      font-size: 0.85em;
+      margin-bottom: 3px;
+      color: white;
+    }
+    
+    .filter-group input {
+      padding: 5px 6px;
+      border-radius: 4px;
+      border: none;
+      font-size: 0.9em;
+      width: 100%;
+      box-sizing: border-box;
+    
+    }
+    #filters label {
+      font-size: 0.85em;
+      margin-bottom: 5px;
+      color: white; /* text alb */
+    }
+    
+    #filters label {
+      font-size: 0.85em;
+      margin-bottom: 5px;
+    }
+    #filters input {
+      padding: 5px 8px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      font-size: 0.9em;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    #pageSize {
+      padding: 5px 10px;
+      font-size: 1em;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background-color: white;
+      cursor: pointer;
+    }
+    #cars-table {
+      margin: 0 auto;
+      width: 100%;
+      background: white;
+      border-radius: 5px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+#filters > div {
+  display: flex;
+  flex-direction: column;
+  min-width: 70px;
+}
+
+#filters label {
+  font-size: 0.65em;
+  margin-bottom: 0px;
+  color: white;
+  font-weight: 600;
+}
+
+#filters input[type="number"] {
+  width: 60px;          /* lățime fixă pentru input */
+  padding: 1px 3px;
+  font-size: 0.6em;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Lățime mai mare pentru filtrele Mileage (al doilea div în #filters) */
+#filters > div:nth-child(2) input[type="number"] {
+  width: 69px; /* mai lat pentru valori mari */
+}
+
+/* Lățime mai mare pentru filtrele Price (al treilea div în #filters) */
+#filters > div:nth-child(3) input[type="number"] {
+  width: 58px; /* puțin mai lat pentru price */
+}
+#buttons-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: 10px; /* ca să nu fie lipite de inputuri */
+}
+
+button {
+  background-color: #ec735b; /* albastru */
+  color: white;
+  border: none;
+  padding: 2px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0f052f; /* albastru închis la hover */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.5);
+}
+
+/* Pentru iconițe mici */
+button i {
+  font-style: normal; /* să nu aibă italic implicit */
+  font-size: 16px;
+  line-height: 1;
+}
+  .info-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #e74c3c; /* roșu intens */
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    cursor: help;
+  }
+@media screen and (max-width: 1200px) {
+  #filters {
+    flex-direction: row ;
+    max-width: 100%;
+  }
+  .filter-group {
+    min-width: 100%;
+  }
+}
+#cars-table {
+  font-size: 9px;
+}
+/* Adăugăm un fundal mov pentru anunțurile noi */
+.new-listing {
+  background-color: #9bed7a;  /* mov deschis */
+  color: rgb(9, 9, 9);  /* text alb pentru a face contrast */
+}
+
+  </style>
+</head>
+<body>
+
+  <div id="header">
+    <h1>🚗 Car Dashboard</h1>
+    <div>
+      <label for="pageSize">Show per page:</label>
+      <select id="pageSize">
+        <option value="50">50</option>
+        <option value="100" selected>100</option>
+        <option value="150">150</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="filters">
+    <div>
+      <label>Year Min:</label>
+      <input type="number" id="filter-year-min" placeholder="Min" />
+      <label>Year Max:</label>
+      <input type="number" id="filter-year-max" placeholder="Max" />
+    </div>
+    <div>
+      <label>Mileage Min:</label>
+      <input type="number" id="filter-mileage-min" placeholder="Min" />
+      <label>Mileage Max:</label>
+      <input type="number" id="filter-mileage-max" placeholder="Max" />
+    </div>
+    <div>
+      <label>Price Min:</label>
+      <input type="number" id="filter-price-min" placeholder="Min" />
+      <label>Price Max:</label>
+      <input type="number" id="filter-price-max" placeholder="Max" />
+    </div>
+    <div>
+      <label>Own Min:</label>
+      <input type="number" id="filter-own-min" placeholder="Min" />
+      <label>Own Max:</label>
+      <input type="number" id="filter-own-max" placeholder="Max" />
+    </div>
+    <div>
+      <label>Rating Min:</label>
+      <input type="number" id="filter-rating-min" placeholder="Min" />
+      <label>Rating Max:</label>
+      <input type="number" id="filter-rating-max" placeholder="Max" />
+    </div>
+    <div>
+      <label>Joined Min:</label>
+      <input type="number" id="filter-joined-min" placeholder="Min" />
+      <label>Joined Max:</label>
+      <input type="number" id="filter-joined-max" placeholder="Max" />
+    </div>
+    <div>
+      <label>Since Min:</label>
+      <input type="number" id="filter-since-min" placeholder="Min" />
+      <label>Since Max:</label>
+      <input type="number" id="filter-since-max" placeholder="Max" />
+    </div>
+    <div>
+      <label>SScore Min:</label>
+      <input type="number" id="filter-sscore-min" placeholder="Min" />
+      <label>SScore Max:</label>
+      <input type="number" id="filter-sscore-max" placeholder="Max" />
+    </div>
+    <div>
+      <label>Clean Min:</label>
+      <input type="number" id="filter-clean-min" placeholder="Min" />
+      <label>Clean Max:</label>
+      <input type="number" id="filter-clean-max" placeholder="Max" />
+    </div>
+    <div>
+      <label>Has VIN Min:</label>
+      <input type="number" id="filter-vin-min" placeholder="Min" />
+      <label>Has VIN Max:</label>
+      <input type="number" id="filter-vin-max" placeholder="Max" />
+    </div>
+    <div id="buttons" style="margin-left: 20px; display: flex; gap: 10px; align-items: center;">
+  <button id="refresh-btn" style="padding: 6px 12px; cursor: pointer; font-weight: bold;">Refresh Page</button>
+  <button id="clear-filters-btn" style="padding: 6px 12px; cursor: pointer; font-weight: bold;">Clear Filters</button>
+</div>
+<div id="preset-filters" style="display: flex; flex-direction: column; gap: 10px; width: 200px; margin-left: 10px;">
+<div style="display: flex; flex-direction: column; gap: 10px; width: 200px; margin-left: 10px;">
+  <div style="display: flex; align-items: center; gap: 5px;">
+    <button id="preset1">Top 1</button>
+    <span class="info-icon" title="Filters cars with:
+• Year between last 12 years
+• Mileage under 80,000 km
+• Price between $4,000 and $17,000
+• 1 to 2 previous owners
+• Seller score between -2 and 10
+• Only clean title vehicles 
+• Note: Filters can be adjusted (e.g., set Clean Title to 0 to include undeclared vehicles).">i</span>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 5px;">
+    <button id="preset2">Top 2</button>
+    <span class="info-icon" title="Filters cars with:
+• Year between 2012 and 2024
+• Mileage between 80,000 and 100,000 km
+• Price between $4,000 and $17,000
+• 1 to 2 previous owners
+• Seller score between -5 and 20
+• VIN and Clean Title are optional
+• Note: You can adjust filters for broader results.">i</span>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 5px;">
+    <button id="preset3">Top 3</button>
+    <span class="info-icon" title="Filters cars with:
+• Year from last 7 years
+• Mileage between 80,000 and 200,000 km
+• Price between $4,000 and $17,000
+• 1 to 2 previous owners
+• Seller score between -5 and 20
+• VIN and Clean Title are optional
+• Note: You can adjust filters for broader results.">i</span>
+  </div>
+</div>
+
+  </div>
+
+
+
+
+
+
+  
+  <div id="cars-table"></div>
+  <script src="{{ url_for('static', filename='media/js/tabulator.min.js') }}"></script>
+  <script>
+    const yesNoFilter = function(cell, onRendered, success, cancel, editorParams){
+  const select = document.createElement("select");
+  const options = [
+    {label: "Any", value: ""},
+    {label: "Yes", value: "1"},
+    {label: "No", value: "0"},
+  ];
+  options.forEach(opt => {
+    const option = document.createElement("option");
+    option.value = opt.value;
+    option.text = opt.label;
+    select.appendChild(option);
+  });
+  select.addEventListener("change", function(){
+    success(this.value);
+  });
+  return select;
+};
+
+const yesNoFilterFunc = function(headerValue, rowValue){
+  if(headerValue === "") return true;  // dacă "Any", acceptă tot
+  return rowValue == headerValue;       // altfel egale
+};
+
+    const table = new Tabulator("#cars-table", {
+      layout: "fitDataStretch",
+      pagination: "local",
+      paginationSize: parseInt(document.getElementById("pageSize").value),
+      ajaxURL: "/api/cars",
+      ajaxResponse: function(url, params, response) {
+        return response.map(car => {
+          car.price_num = parseFloat((car.price || "").replace(/[^0-9.]+/g, "")) || 0;
+          return car;
+        });
+      },
+      rowFormatter: function(row) {
+        // Verificăm dacă rândul este unul nou (new: 1) și aplicăm stilul mov
+        const carData = row.getData();
+        if (carData.new === 1) {
+          row.getElement().classList.add("new-listing"); // Adăugăm clasa CSS pentru stilul mov
+        }
+      },
+      columns: [
+        { title: "ID", field: "id", headerFilter: "input", hozAlign: "left", width: 10 , sorter: "desc"},
+        { title: "Year", field: "year", hozAlign: "center", headerFilter: "input", width: 20 },        
+        { title: "Title", field: "title", headerFilter: "input", width: 170 },
+        { title: "Mileage", field: "mileage", hozAlign: "right", headerFilter: "input", width: 47 },
+        {
+      title: "Price",
+      field: "price_num", // folosim valoarea numerică
+      hozAlign: "right",
+      headerFilter: "input",
+      sorter: "number", // folosim sortare numerică
+      formatter: function(cell) {
+        let val = cell.getRow().getData().price || "";
+        return priceFormatter({ getValue: () => val });
+      }
+     },
+        { title: "State", field: "state", width: 60, headerFilter: "input", width: 16 },
+        { title: "City", field: "city", headerFilter: "input",width: 75 },
+        {
+  title: "Url",  
+  field: "url",
+  hozAlign: "center",
+  width: 27,        
+  minWidth: 27,     
+  maxWidth: 50,     
+  resizable: false,
+  headerSort: false,
+  tooltip: false,
+  cssClass: "marketplace-col",  
+  formatter: function(cell) {
+    const url = cell.getValue();
+    if (!url) return "";
+
+    const isFacebook = url.startsWith("https://www.facebook.com");
+    const label = isFacebook ? "FB" : "CL";
+    const bgColor = isFacebook ? "#1877F2" : "#FF6B6B";
+
+    // Deschide în fereastră separată cu window.open()
+    return `<a href="javascript:void(0);" onclick="window.open('${url}', '_blank', 'width=800,height=600'); return false;"
+              style="display:block;width:22px;height:18px;
+                     text-align:center;border-radius:3px;
+                     background:${bgColor};color:white;
+                     font-size:9px;font-weight:bold;
+                     line-height:18px;text-decoration:none;">
+              ${label}
+            </a>`;
+  }
+},
+        { title: "VIN", field: "vin", headerFilter: "input", formatter: unknownFormatter, width: 40 },
+        { title: "Seller", field: "seller", headerFilter: "input", headerTooltip: "Name of the seller (person or dealership)", width: 60 },
+        { title: "Clean", field: "clean", formatter: "tickCross", hozAlign: "center",  headerFilter: yesNoFilter, headerFilterFunc: yesNoFilterFunc, width: 30 },
+        {
+          title: "<span title='Negative words detected in the car description'>🔴 -</span>",
+          field: "nflags",
+          headerFilter: "input",
+          hozAlign: "center",
+          width: 100
+        },
+        {
+          title: "<span title='Positive words detected in the car description'>🟢 +</span>",
+          field: "pflags",
+          headerFilter: "input",
+          hozAlign: "center",
+          width: 100
+        },
+        {
+          title: "<span title='✓ = Declared as paid off (car is not under financing). ? = Unknown status.'>Paid off</span>",
+          field: "paid",
+          width: 20,
+          headerFilter: "input",
+          formatter: paidFormatter,
+          hozAlign: "center"
+        },
+        { title: "Brand", field: "Brand", headerFilter: "input",width: 45 },
+        { title: "Fuel", field: "fuel", width: 80, headerFilter: "input",width: 20 },
+        { title: "Tra", field: "Tra", width: 80, headerFilter: "input", headerTooltip: "Transmission Type (Manual / Automatic / CVT etc.)",width: 20 },
+        { title: "Type", field: "type", width: 100, headerFilter: "input",width: 35 },
+        { title: "Ext", field: "ext_col", headerFilter: "input",width: 25 },
+        { title: "<span title='Numărul de proprietari anteriori'>Owner</span>", field: "own", width: 10, headerFilter: "input", formatter: unknownFormatter },
+        { title: "Safety (1–5★)", field: "safety", width: 100, headerFilter: "input", formatter: unknownFormatter,width: 20 },
+        { title: "Rat.FB", field: "rating", width: 70, headerFilter: "input", headerTooltip: "Facebook Rating",width: 20 },
+        { title: "Join.FB", field: "joined", width: 80, headerFilter: "input", headerTooltip: "Year the user joined Facebook",width: 10 },
+        {
+          title: "Since (days)",
+          field: "since",
+          hozAlign: "right",
+          headerFilter: "input",
+          width: 10,
+          headerTooltip: "Number of days since the listing was posted",
+          formatter: function(cell) {
+            const ore = cell.getValue();
+            if (ore === null || ore === undefined || ore === "") return "?";
+            const zile = ore / 24;
+            return zile.toFixed(2);
+          }
+        },
+                {
+          title: "Sell.Score",
+          field: "sscore",
+          width: 10 ,
+          hozAlign: "center",
+          headerFilter: "input",
+          headerTooltip: "Score based on ad age and number of low ratings. A lower score means the seller is likely not professional."
+        },
+        { title: "Has VIN", field: "has_vin", formatter: "tickCross", hozAlign: "center", headerFilter: yesNoFilter, headerFilterFunc: yesNoFilterFunc,width: 10 },
+      ]
+    });
+
+    document.getElementById("pageSize").addEventListener("change", function () {
+      const size = parseInt(this.value);
+      table.setPageSize(size);
+      table.setPage(1);
+    });
+
+    function unknownFormatter(cell) {
+  const val = cell.getValue();
+  if (val === null || val === "" || val === "Unknown") {
+    return "?";
+  }
+  return val;
+}
+
+function paidFormatter(cell) {
+  const val = cell.getValue();
+
+  if (val === "true" || val === true) {
+    // afișează bifă
+    return "<span style='color:green;'>&#10003;</span>";  // ✓
+  }
+  if (val === "Unknown" || val === null || val === "") {
+    // afișează semnul întrebării
+    return "?";
+  }
+  // altfel afișează valoarea ca text
+  return val;
+}
+function priceFormatter(cell) {
+  let val = cell.getValue();
+
+  // Extrage partea numerică curată
+  let numStr = "";
+  if (typeof val === "string") {
+    numStr = val.replace(/[^0-9.]+/g, ""); // păstrează cifre și punct
+  } else if (typeof val === "number") {
+    numStr = val.toFixed(2);
+  } else {
+    return val;
+  }
+
+  // Împarte în parte întreagă și zecimale
+  let parts = numStr.split(".");
+  let intPart = parts[0];
+  let decPart = parts[1] || "00";
+
+  // Returnează HTML cu simbolul $ verde în față
+  return `<span style="color: green; font-weight: bold; margin-right: 3px;">$</span><span style="font-weight:bold; font-size:1.1em;">${intPart}</span><span style="font-size:0.7em; color:#777;">.${decPart}</span>`;
+}
+
+
+        // Event filtre min/max
+        const filterFields = [
+          {idMin:"filter-year-min", idMax:"filter-year-max", field:"year"},
+          {idMin:"filter-mileage-min", idMax:"filter-mileage-max", field:"mileage"},
+          {idMin:"filter-price-min", idMax:"filter-price-max", field:"price_num"},
+          {idMin:"filter-own-min", idMax:"filter-own-max", field:"own"},
+          {idMin:"filter-rating-min", idMax:"filter-rating-max", field:"rating"},
+          {idMin:"filter-joined-min", idMax:"filter-joined-max", field:"joined"},
+          {idMin:"filter-since-min", idMax:"filter-since-max", field:"since"},
+          {idMin:"filter-sscore-min", idMax:"filter-sscore-max", field:"sscore"},
+          {idMin:"filter-clean-min", idMax:"filter-clean-max", field:"clean"},
+          {idMin:"filter-vin-min", idMax:"filter-vin-max", field:"has_vin"},
+        ];
+
+        filterFields.forEach(({idMin, idMax, field, isPrice}) => {
+          document.getElementById(idMin).addEventListener("input", function() {
+            updateFilters();
+          });
+          document.getElementById(idMax).addEventListener("input", function() {
+            updateFilters();
+          });
+        });
+
+        function updateFilters() {
+          let filters = [];
+          filterFields.forEach(({idMin, idMax, field, isPrice}) => {
+            let minVal = document.getElementById(idMin).value;
+            let maxVal = document.getElementById(idMax).value;
+
+            if (minVal !== "") {
+              if (isPrice) {
+                // extrage număr din șir preț (ex: "$ 6300") ca să compar numeric
+                minVal = parseFloat(minVal);
+                filters.push({field: field, type: ">=", value: minVal});
+              } else {
+                filters.push({field: field, type: ">=", value: minVal});
+              }
+            }
+            if (maxVal !== "") {
+              if (isPrice) {
+                maxVal = parseFloat(maxVal);
+                filters.push({field: field, type: "<=", value: maxVal});
+              } else {
+                filters.push({field: field, type: "<=", value: maxVal});
+              }
+            }
+          });
+          table.setFilter(filters);
+        }
+
+        // Paginație
+        document.getElementById("pageSize").addEventListener("change", function () {
+          const size = parseInt(this.value);
+          table.setPageSize(size);
+          table.setPage(1);
+        });
+
+        
+  </script>
+<script>
+document.getElementById("refresh-btn").addEventListener("click", function() {
+  location.reload();
+});
+
+document.getElementById("clear-filters-btn").addEventListener("click", function() {
+  document.querySelectorAll("#filters input").forEach(input => input.value = "");
+  table.clearFilter(true);
+});
+
+document.getElementById("preset1").addEventListener("click", function () {
+  // Vechime: ultimele 3 ani
+  const currentYear = new Date().getFullYear();
+  document.getElementById("filter-year-min").value = currentYear - 12;
+  document.getElementById("filter-year-max").value = currentYear;
+
+  // Mileage: 0–50000 km
+  document.getElementById("filter-mileage-min").value = 0;
+  document.getElementById("filter-mileage-max").value = 80000;
+
+  // Price: 5000–15000
+  document.getElementById("filter-price-min").value = 4000;
+  document.getElementById("filter-price-max").value = 17000;
+
+  // Own: 1–3
+  document.getElementById("filter-own-min").value = 1;
+  document.getElementById("filter-own-max").value = 2;
+
+  // Rating: minim 4.5
+  document.getElementById("filter-rating-min").value = 0;
+  document.getElementById("filter-rating-max").value = "";
+
+  // Joined: minim 2020
+  document.getElementById("filter-joined-min").value = "";
+  document.getElementById("filter-joined-max").value = "";
+
+  // Since: minim 100 zile
+  document.getElementById("filter-since-min").value = "";
+  document.getElementById("filter-since-max").value = "";
+
+  // SScore: minim 80
+  document.getElementById("filter-sscore-min").value = "-2";
+  document.getElementById("filter-sscore-max").value = "10";
+
+  // Clean: 1 (true)
+  document.getElementById("filter-clean-min").value = 1;
+  document.getElementById("filter-clean-max").value = 1;
+
+  // Has VIN: 1 (true)
+  document.getElementById("filter-vin-min").value = "";
+  document.getElementById("filter-vin-max").value = "";
+
+  // Aplică filtrele
+  updateFilters();
+});
+
+document.getElementById("preset2").addEventListener("click", function () {
+  const currentYear = new Date().getFullYear();
+
+  // Setări relaxate
+  document.getElementById("filter-year-min").value = 2012;
+  document.getElementById("filter-year-max").value = "2024";
+
+  document.getElementById("filter-mileage-min").value = "80000";
+  document.getElementById("filter-mileage-max").value = 100000;
+
+  document.getElementById("filter-price-min").value = 4000;
+  document.getElementById("filter-price-max").value = 17000;
+
+  document.getElementById("filter-own-min").value = 1;
+  document.getElementById("filter-own-max").value = 2;
+
+  document.getElementById("filter-rating-min").value = "";
+  document.getElementById("filter-rating-max").value = "";
+
+  document.getElementById("filter-joined-min").value = "";
+  document.getElementById("filter-joined-max").value = "";
+
+  document.getElementById("filter-since-min").value = "";
+  document.getElementById("filter-since-max").value = "";
+
+  document.getElementById("filter-sscore-min").value = -5;
+  document.getElementById("filter-sscore-max").value = 20;
+
+  // VIN și Clean neobligatorii – nu le setăm, le lăsăm goale
+  document.getElementById("filter-clean-min").value = "";
+  document.getElementById("filter-clean-max").value = "";
+  document.getElementById("filter-vin-min").value = "";
+  document.getElementById("filter-vin-max").value = "";
+
+  updateFilters();
+});
+
+
+document.getElementById("preset3").addEventListener("click", function () {
+  const currentYear = new Date().getFullYear();
+
+  // Setări relaxate
+  document.getElementById("filter-year-min").value = currentYear - 7;
+  document.getElementById("filter-year-max").value = currentYear;
+
+  document.getElementById("filter-mileage-min").value = "80000";
+  document.getElementById("filter-mileage-max").value = 200000;
+
+  document.getElementById("filter-price-min").value = 4000;
+  document.getElementById("filter-price-max").value = 17000;
+
+  document.getElementById("filter-own-min").value = 1;
+  document.getElementById("filter-own-max").value = 2;
+
+  document.getElementById("filter-rating-min").value = "";
+  document.getElementById("filter-rating-max").value = "";
+
+  document.getElementById("filter-joined-min").value = "";
+  document.getElementById("filter-joined-max").value = "";
+
+  document.getElementById("filter-since-min").value = "";
+  document.getElementById("filter-since-max").value = "";
+
+  document.getElementById("filter-sscore-min").value = -5;
+  document.getElementById("filter-sscore-max").value = 20;
+
+  // VIN și Clean neobligatorii – nu le setăm, le lăsăm goale
+  document.getElementById("filter-clean-min").value = "";
+  document.getElementById("filter-clean-max").value = "";
+  document.getElementById("filter-vin-min").value = "";
+  document.getElementById("filter-vin-max").value = "";
+
+  updateFilters();
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,736 @@
+search_tasks:
+- city: Chicago, Illinois
+  price_min: 7800
+  price_max: 14000
+- city: Aurora, Illinois
+  price_min: 7800
+  price_max: 14000
+- city: Rockford, Illinois
+  price_min: 7800
+  price_max: 14000
+- city: Joliet, Illinois
+  price_min: 7800
+  price_max: 14000
+- city: Naperville, Illinois
+  price_min: 7800
+  price_max: 14000
+- city: Birmingham, Alabama
+  price_min: 7800
+  price_max: 14000
+- city: Montgomery, Alabama
+  price_min: 7800
+  price_max: 14000
+- city: Huntsville, Alabama
+  price_min: 7800
+  price_max: 14000
+- city: Mobile, Alabama
+  price_min: 7800
+  price_max: 14000
+- city: Tuscaloosa, Alabama
+  price_min: 7800
+  price_max: 14000
+- city: Anchorage, Alaska
+  price_min: 7800
+  price_max: 14000
+- city: Fairbanks, Alaska
+  price_min: 7800
+  price_max: 14000
+- city: Juneau, Alaska
+  price_min: 7800
+  price_max: 14000
+- city: Sitka, Alaska
+  price_min: 7800
+  price_max: 14000
+- city: Wasilla, Alaska
+  price_min: 7800
+  price_max: 14000
+- city: Phoenix, Arizona
+  price_min: 7800
+  price_max: 14000
+- city: Tucson, Arizona
+  price_min: 7800
+  price_max: 14000
+- city: Mesa, Arizona
+  price_min: 7800
+  price_max: 14000
+- city: Chandler, Arizona
+  price_min: 7800
+  price_max: 14000
+- city: Scottsdale, Arizona
+  price_min: 7800
+  price_max: 14000
+- city: Little Rock, Arkansas
+  price_min: 7800
+  price_max: 14000
+- city: Fort Smith, Arkansas
+  price_min: 7800
+  price_max: 14000
+- city: Fayetteville, Arkansas
+  price_min: 7800
+  price_max: 14000
+- city: Springdale, Arkansas
+  price_min: 7800
+  price_max: 14000
+- city: Jonesboro, Arkansas
+  price_min: 7800
+  price_max: 14000
+- city: Los Angeles, California
+  price_min: 7800
+  price_max: 14000
+- city: San Diego, California
+  price_min: 7800
+  price_max: 14000
+- city: San Jose, California
+  price_min: 7800
+  price_max: 14000
+- city: San Francisco, California
+  price_min: 7800
+  price_max: 14000
+- city: Fresno, California
+  price_min: 7800
+  price_max: 14000
+- city: Denver, Colorado
+  price_min: 7800
+  price_max: 14000
+- city: Colorado Springs, Colorado
+  price_min: 7800
+  price_max: 14000
+- city: Aurora, Colorado
+  price_min: 7800
+  price_max: 14000
+- city: Fort Collins, Colorado
+  price_min: 7800
+  price_max: 14000
+- city: Lakewood, Colorado
+  price_min: 7800
+  price_max: 14000
+- city: Bridgeport, Connecticut
+  price_min: 7800
+  price_max: 14000
+- city: New Haven, Connecticut
+  price_min: 7800
+  price_max: 14000
+- city: Hartford, Connecticut
+  price_min: 7800
+  price_max: 14000
+- city: Stamford, Connecticut
+  price_min: 7800
+  price_max: 14000
+- city: Waterbury, Connecticut
+  price_min: 7800
+  price_max: 14000
+- city: Wilmington, Delaware
+  price_min: 7800
+  price_max: 14000
+- city: Dover, Delaware
+  price_min: 7800
+  price_max: 14000
+- city: Newark, Delaware
+  price_min: 7800
+  price_max: 14000
+- city: Middletown, Delaware
+  price_min: 7800
+  price_max: 14000
+- city: Smyrna, Delaware
+  price_min: 7800
+  price_max: 14000
+- city: Jacksonville, Florida
+  price_min: 7800
+  price_max: 14000
+- city: Miami, Florida
+  price_min: 7800
+  price_max: 14000
+- city: Tampa, Florida
+  price_min: 7800
+  price_max: 14000
+- city: Orlando, Florida
+  price_min: 7800
+  price_max: 14000
+- city: St. Petersburg, Florida
+  price_min: 7800
+  price_max: 14000
+- city: Atlanta, Georgia
+  price_min: 7800
+  price_max: 14000
+- city: Augusta, Georgia
+  price_min: 7800
+  price_max: 14000
+- city: Columbus, Georgia
+  price_min: 7800
+  price_max: 14000
+- city: Savannah, Georgia
+  price_min: 7800
+  price_max: 14000
+- city: Athens, Georgia
+  price_min: 7800
+  price_max: 14000
+- city: Honolulu, Hawaii
+  price_min: 7800
+  price_max: 14000
+- city: Pearl City, Hawaii
+  price_min: 7800
+  price_max: 14000
+- city: Hilo, Hawaii
+  price_min: 7800
+  price_max: 14000
+- city: Kailua, Hawaii
+  price_min: 7800
+  price_max: 14000
+- city: Waipahu, Hawaii
+  price_min: 7800
+  price_max: 14000
+- city: Boise, Idaho
+  price_min: 7800
+  price_max: 14000
+- city: Meridian, Idaho
+  price_min: 7800
+  price_max: 14000
+- city: Nampa, Idaho
+  price_min: 7800
+  price_max: 14000
+- city: Idaho Falls, Idaho
+  price_min: 7800
+  price_max: 14000
+- city: Pocatello, Idaho
+  price_min: 7800
+  price_max: 14000
+- city: Indianapolis, Indiana
+  price_min: 7800
+  price_max: 14000
+- city: Fort Wayne, Indiana
+  price_min: 7800
+  price_max: 14000
+- city: Evansville, Indiana
+  price_min: 7800
+  price_max: 14000
+- city: South Bend, Indiana
+  price_min: 7800
+  price_max: 14000
+- city: Carmel, Indiana
+  price_min: 7800
+  price_max: 14000
+- city: Des Moines, Iowa
+  price_min: 7800
+  price_max: 14000
+- city: Cedar Rapids, Iowa
+  price_min: 7800
+  price_max: 14000
+- city: Davenport, Iowa
+  price_min: 7800
+  price_max: 14000
+- city: Sioux City, Iowa
+  price_min: 7800
+  price_max: 14000
+- city: Iowa City, Iowa
+  price_min: 7800
+  price_max: 14000
+- city: Wichita, Kansas
+  price_min: 7800
+  price_max: 14000
+- city: Overland Park, Kansas
+  price_min: 7800
+  price_max: 14000
+- city: Kansas City, Kansas
+  price_min: 7800
+  price_max: 14000
+- city: Topeka, Kansas
+  price_min: 7800
+  price_max: 14000
+- city: Olathe, Kansas
+  price_min: 7800
+  price_max: 14000
+- city: Louisville, Kentucky
+  price_min: 7800
+  price_max: 14000
+- city: Lexington, Kentucky
+  price_min: 7800
+  price_max: 14000
+- city: Bowling Green, Kentucky
+  price_min: 7800
+  price_max: 14000
+- city: Owensboro, Kentucky
+  price_min: 7800
+  price_max: 14000
+- city: Covington, Kentucky
+  price_min: 7800
+  price_max: 14000
+- city: New Orleans, Louisiana
+  price_min: 7800
+  price_max: 14000
+- city: Baton Rouge, Louisiana
+  price_min: 7800
+  price_max: 14000
+- city: Shreveport, Louisiana
+  price_min: 7800
+  price_max: 14000
+- city: Lafayette, Louisiana
+  price_min: 7800
+  price_max: 14000
+- city: Lake Charles, Louisiana
+  price_min: 7800
+  price_max: 14000
+- city: Portland, Maine
+  price_min: 7800
+  price_max: 14000
+- city: Lewiston, Maine
+  price_min: 7800
+  price_max: 14000
+- city: Bangor, Maine
+  price_min: 7800
+  price_max: 14000
+- city: South Portland, Maine
+  price_min: 7800
+  price_max: 14000
+- city: Auburn, Maine
+  price_min: 7800
+  price_max: 14000
+- city: Baltimore, Maryland
+  price_min: 7800
+  price_max: 14000
+- city: Frederick, Maryland
+  price_min: 7800
+  price_max: 14000
+- city: Rockville, Maryland
+  price_min: 7800
+  price_max: 14000
+- city: Gaithersburg, Maryland
+  price_min: 7800
+  price_max: 14000
+- city: Bowie, Maryland
+  price_min: 7800
+  price_max: 14000
+- city: Boston, Massachusetts
+  price_min: 7800
+  price_max: 14000
+- city: Worcester, Massachusetts
+  price_min: 7800
+  price_max: 14000
+- city: Springfield, Massachusetts
+  price_min: 7800
+  price_max: 14000
+- city: Lowell, Massachusetts
+  price_min: 7800
+  price_max: 14000
+- city: Cambridge, Massachusetts
+  price_min: 7800
+  price_max: 14000
+- city: Detroit, Michigan
+  price_min: 7800
+  price_max: 14000
+- city: Grand Rapids, Michigan
+  price_min: 7800
+  price_max: 14000
+- city: Warren, Michigan
+  price_min: 7800
+  price_max: 14000
+- city: Sterling Heights, Michigan
+  price_min: 7800
+  price_max: 14000
+- city: Ann Arbor, Michigan
+  price_min: 7800
+  price_max: 14000
+- city: Minneapolis, Minnesota
+  price_min: 7800
+  price_max: 14000
+- city: St. Paul, Minnesota
+  price_min: 7800
+  price_max: 14000
+- city: Rochester, Minnesota
+  price_min: 7800
+  price_max: 14000
+- city: Duluth, Minnesota
+  price_min: 7800
+  price_max: 14000
+- city: Bloomington, Minnesota
+  price_min: 7800
+  price_max: 14000
+- city: Jackson, Mississippi
+  price_min: 7800
+  price_max: 14000
+- city: Gulfport, Mississippi
+  price_min: 7800
+  price_max: 14000
+- city: Southaven, Mississippi
+  price_min: 7800
+  price_max: 14000
+- city: Hattiesburg, Mississippi
+  price_min: 7800
+  price_max: 14000
+- city: Biloxi, Mississippi
+  price_min: 7800
+  price_max: 14000
+- city: Kansas City, Missouri
+  price_min: 7800
+  price_max: 14000
+- city: St. Louis, Missouri
+  price_min: 7800
+  price_max: 14000
+- city: Springfield, Missouri
+  price_min: 7800
+  price_max: 14000
+- city: Independence, Missouri
+  price_min: 7800
+  price_max: 14000
+- city: Columbia, Missouri
+  price_min: 7800
+  price_max: 14000
+- city: Billings, Montana
+  price_min: 7800
+  price_max: 14000
+- city: Missoula, Montana
+  price_min: 7800
+  price_max: 14000
+- city: Great Falls, Montana
+  price_min: 7800
+  price_max: 14000
+- city: Bozeman, Montana
+  price_min: 7800
+  price_max: 14000
+- city: Butte, Montana
+  price_min: 7800
+  price_max: 14000
+- city: Omaha, Nebraska
+  price_min: 7800
+  price_max: 14000
+- city: Lincoln, Nebraska
+  price_min: 7800
+  price_max: 14000
+- city: Bellevue, Nebraska
+  price_min: 7800
+  price_max: 14000
+- city: Grand Island, Nebraska
+  price_min: 7800
+  price_max: 14000
+- city: Kearney, Nebraska
+  price_min: 7800
+  price_max: 14000
+- city: Las Vegas, Nevada
+  price_min: 7800
+  price_max: 14000
+- city: Henderson, Nevada
+  price_min: 7800
+  price_max: 14000
+- city: Reno, Nevada
+  price_min: 7800
+  price_max: 14000
+- city: North Las Vegas, Nevada
+  price_min: 7800
+  price_max: 14000
+- city: Sparks, Nevada
+  price_min: 7800
+  price_max: 14000
+- city: Manchester, New Hampshire
+  price_min: 7800
+  price_max: 14000
+- city: Nashua, New Hampshire
+  price_min: 7800
+  price_max: 14000
+- city: Concord, New Hampshire
+  price_min: 7800
+  price_max: 14000
+- city: Dover, New Hampshire
+  price_min: 7800
+  price_max: 14000
+- city: Rochester, New Hampshire
+  price_min: 7800
+  price_max: 14000
+- city: Newark, New Jersey
+  price_min: 7800
+  price_max: 14000
+- city: Jersey City, New Jersey
+  price_min: 7800
+  price_max: 14000
+- city: Paterson, New Jersey
+  price_min: 7800
+  price_max: 14000
+- city: Elizabeth, New Jersey
+  price_min: 7800
+  price_max: 14000
+- city: Edison, New Jersey
+  price_min: 7800
+  price_max: 14000
+- city: New York City, New York
+  price_min: 7800
+  price_max: 14000
+- city: Buffalo, New York
+  price_min: 7800
+  price_max: 14000
+- city: Rochester, New York
+  price_min: 7800
+  price_max: 14000
+- city: Yonkers, New York
+  price_min: 7800
+  price_max: 14000
+- city: Syracuse, New York
+  price_min: 7800
+  price_max: 14000
+- city: Charlotte, North Carolina
+  price_min: 7800
+  price_max: 14000
+- city: Raleigh, North Carolina
+  price_min: 7800
+  price_max: 14000
+- city: Greensboro, North Carolina
+  price_min: 7800
+  price_max: 14000
+- city: Durham, North Carolina
+  price_min: 7800
+  price_max: 14000
+- city: Winston-Salem, North Carolina
+  price_min: 7800
+  price_max: 14000
+- city: Fargo, North Dakota
+  price_min: 7800
+  price_max: 14000
+- city: Bismarck, North Dakota
+  price_min: 7800
+  price_max: 14000
+- city: Grand Forks, North Dakota
+  price_min: 7800
+  price_max: 14000
+- city: Minot, North Dakota
+  price_min: 7800
+  price_max: 14000
+- city: West Fargo, North Dakota
+  price_min: 7800
+  price_max: 14000
+- city: Columbus, Ohio
+  price_min: 7800
+  price_max: 14000
+- city: Cleveland, Ohio
+  price_min: 7800
+  price_max: 14000
+- city: Cincinnati, Ohio
+  price_min: 7800
+  price_max: 14000
+- city: Toledo, Ohio
+  price_min: 7800
+  price_max: 14000
+- city: Akron, Ohio
+  price_min: 7800
+  price_max: 14000
+- city: Oklahoma City, Oklahoma
+  price_min: 7800
+  price_max: 14000
+- city: Tulsa, Oklahoma
+  price_min: 7800
+  price_max: 14000
+- city: Norman, Oklahoma
+  price_min: 7800
+  price_max: 14000
+- city: Broken Arrow, Oklahoma
+  price_min: 7800
+  price_max: 14000
+- city: Lawton, Oklahoma
+  price_min: 7800
+  price_max: 14000
+- city: Portland, Oregon
+  price_min: 7800
+  price_max: 14000
+- city: Salem, Oregon
+  price_min: 7800
+  price_max: 14000
+- city: Eugene, Oregon
+  price_min: 7800
+  price_max: 14000
+- city: Gresham, Oregon
+  price_min: 7800
+  price_max: 14000
+- city: Hillsboro, Oregon
+  price_min: 7800
+  price_max: 14000
+- city: Philadelphia, Pennsylvania
+  price_min: 7800
+  price_max: 14000
+- city: Pittsburgh, Pennsylvania
+  price_min: 7800
+  price_max: 14000
+- city: Allentown, Pennsylvania
+  price_min: 7800
+  price_max: 14000
+- city: Erie, Pennsylvania
+  price_min: 7800
+  price_max: 14000
+- city: Reading, Pennsylvania
+  price_min: 7800
+  price_max: 14000
+- city: Providence, Rhode Island
+  price_min: 7800
+  price_max: 14000
+- city: Warwick, Rhode Island
+  price_min: 7800
+  price_max: 14000
+- city: Cranston, Rhode Island
+  price_min: 7800
+  price_max: 14000
+- city: Pawtucket, Rhode Island
+  price_min: 7800
+  price_max: 14000
+- city: East Providence, Rhode Island
+  price_min: 7800
+  price_max: 14000
+- city: Columbia, South Carolina
+  price_min: 7800
+  price_max: 14000
+- city: Charleston, South Carolina
+  price_min: 7800
+  price_max: 14000
+- city: North Charleston, South Carolina
+  price_min: 7800
+  price_max: 14000
+- city: Mount Pleasant, South Carolina
+  price_min: 7800
+  price_max: 14000
+- city: Rock Hill, South Carolina
+  price_min: 7800
+  price_max: 14000
+- city: Sioux Falls, South Dakota
+  price_min: 7800
+  price_max: 14000
+- city: Rapid City, South Dakota
+  price_min: 7800
+  price_max: 14000
+- city: Aberdeen, South Dakota
+  price_min: 7800
+  price_max: 14000
+- city: Brookings, South Dakota
+  price_min: 7800
+  price_max: 14000
+- city: Watertown, South Dakota
+  price_min: 7800
+  price_max: 14000
+- city: Nashville, Tennessee
+  price_min: 7800
+  price_max: 14000
+- city: Memphis, Tennessee
+  price_min: 7800
+  price_max: 14000
+- city: Knoxville, Tennessee
+  price_min: 7800
+  price_max: 14000
+- city: Chattanooga, Tennessee
+  price_min: 7800
+  price_max: 14000
+- city: Clarksville, Tennessee
+  price_min: 7800
+  price_max: 14000
+- city: Houston, Texas
+  price_min: 7800
+  price_max: 14000
+- city: San Antonio, Texas
+  price_min: 7800
+  price_max: 14000
+- city: Dallas, Texas
+  price_min: 7800
+  price_max: 14000
+- city: Austin, Texas
+  price_min: 7800
+  price_max: 14000
+- city: Fort Worth, Texas
+  price_min: 7800
+  price_max: 14000
+- city: Salt Lake City, Utah
+  price_min: 7800
+  price_max: 14000
+- city: West Valley City, Utah
+  price_min: 7800
+  price_max: 14000
+- city: Provo, Utah
+  price_min: 7800
+  price_max: 14000
+- city: West Jordan, Utah
+  price_min: 7800
+  price_max: 14000
+- city: Orem, Utah
+  price_min: 7800
+  price_max: 14000
+- city: Burlington, Vermont
+  price_min: 7800
+  price_max: 14000
+- city: South Burlington, Vermont
+  price_min: 7800
+  price_max: 14000
+- city: Rutland, Vermont
+  price_min: 7800
+  price_max: 14000
+- city: Barre, Vermont
+  price_min: 7800
+  price_max: 14000
+- city: Montpelier, Vermont
+  price_min: 7800
+  price_max: 14000
+- city: Virginia Beach, Virginia
+  price_min: 7800
+  price_max: 14000
+- city: Norfolk, Virginia
+  price_min: 7800
+  price_max: 14000
+- city: Chesapeake, Virginia
+  price_min: 7800
+  price_max: 14000
+- city: Richmond, Virginia
+  price_min: 7800
+  price_max: 14000
+- city: Newport News, Virginia
+  price_min: 7800
+  price_max: 14000
+- city: Seattle, Washington
+  price_min: 7800
+  price_max: 14000
+- city: Spokane, Washington
+  price_min: 7800
+  price_max: 14000
+- city: Tacoma, Washington
+  price_min: 7800
+  price_max: 14000
+- city: Vancouver, Washington
+  price_min: 7800
+  price_max: 14000
+- city: Bellevue, Washington
+  price_min: 7800
+  price_max: 14000
+- city: Charleston, West Virginia
+  price_min: 7800
+  price_max: 14000
+- city: Huntington, West Virginia
+  price_min: 7800
+  price_max: 14000
+- city: Morgantown, West Virginia
+  price_min: 7800
+  price_max: 14000
+- city: Parkersburg, West Virginia
+  price_min: 7800
+  price_max: 14000
+- city: Wheeling, West Virginia
+  price_min: 7800
+  price_max: 14000
+- city: Milwaukee, Wisconsin
+  price_min: 7800
+  price_max: 14000
+- city: Madison, Wisconsin
+  price_min: 7800
+  price_max: 14000
+- city: Green Bay, Wisconsin
+  price_min: 7800
+  price_max: 14000
+- city: Kenosha, Wisconsin
+  price_min: 7800
+  price_max: 14000
+- city: Racine, Wisconsin
+  price_min: 7800
+  price_max: 14000
+- city: Cheyenne, Wyoming
+  price_min: 7800
+  price_max: 14000
+- city: Casper, Wyoming
+  price_min: 7800
+  price_max: 14000
+- city: Laramie, Wyoming
+  price_min: 7800
+  price_max: 14000
+- city: Gillette, Wyoming
+  price_min: 7800
+  price_max: 14000
+- city: Rock Springs, Wyoming
+  price_min: 7800
+  price_max: 14000

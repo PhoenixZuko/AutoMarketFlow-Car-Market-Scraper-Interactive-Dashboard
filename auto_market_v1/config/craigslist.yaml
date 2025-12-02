@@ -1,0 +1,255 @@
+headless: false
+chrome_profile_folder: chrome_profiles/craigslist
+city_list:
+- Los Angeles, CA
+- San Diego, CA
+- San Jose, CA
+- San Francisco, CA
+- Fresno, CA
+- Birmingham, AL
+- Montgomery, AL
+- Huntsville, AL
+- Mobile, AL
+- Tuscaloosa, AL
+- Anchorage, AK
+- Fairbanks, AK
+- Juneau, AK
+- Sitka, AK
+- Wasilla, AK
+- Phoenix, AZ
+- Tucson, AZ
+- Mesa, AZ
+- Chandler, AZ
+- Scottsdale, AZ
+- Little Rock, AR
+- Fort Smith, AR
+- Fayetteville, AR
+- Springdale, AR
+- Jonesboro, AR
+- Denver, CO
+- Colorado Springs, CO
+- Aurora, CO
+- Fort Collins, CO
+- Lakewood, CO
+- Bridgeport, CT
+- New Haven, CT
+- Hartford, CT
+- Stamford, CT
+- Waterbury, CT
+- Wilmington, DE
+- Dover, DE
+- Newark, DE
+- Middletown, DE
+- Smyrna, DE
+- Jacksonville, FL
+- Miami, FL
+- Tampa, FL
+- Orlando, FL
+- St. Petersburg, FL
+- Atlanta, GA
+- Augusta, GA
+- Columbus, GA
+- Savannah, GA
+- Athens, GA
+- Honolulu, HI
+- Pearl City, HI
+- Hilo, HI
+- Kailua, HI
+- Waipahu, HI
+- Boise, ID
+- Meridian, ID
+- Nampa, ID
+- Idaho Falls, ID
+- Pocatello, ID
+- Chicago, IL
+- Aurora, IL
+- Rockford, IL
+- Joliet, IL
+- Naperville, IL
+- Indianapolis, IN
+- Fort Wayne, IN
+- Evansville, IN
+- South Bend, IN
+- Carmel, IN
+- Des Moines, IA
+- Cedar Rapids, IA
+- Davenport, IA
+- Sioux City, IA
+- Iowa City, IA
+- Wichita, KS
+- Overland Park, KS
+- Kansas City, KS
+- Topeka, KS
+- Olathe, KS
+- Louisville, KY
+- Lexington, KY
+- Bowling Green, KY
+- Owensboro, KY
+- Covington, KY
+- New Orleans, LA
+- Baton Rouge, LA
+- Shreveport, LA
+- Lafayette, LA
+- Lake Charles, LA
+- Portland, ME
+- Lewiston, ME
+- Bangor, ME
+- South Portland, ME
+- Auburn, ME
+- Baltimore, MD
+- Frederick, MD
+- Rockville, MD
+- Gaithersburg, MD
+- Bowie, MD
+- Boston, MA
+- Worcester, MA
+- Springfield, MA
+- Lowell, MA
+- Cambridge, MA
+- Detroit, MI
+- Grand Rapids, MI
+- Warren, MI
+- Sterling Heights, MI
+- Ann Arbor, MI
+- Minneapolis, MN
+- St. Paul, MN
+- Rochester, MN
+- Duluth, MN
+- Bloomington, MN
+- Jackson, MS
+- Gulfport, MS
+- Southaven, MS
+- Hattiesburg, MS
+- Biloxi, MS
+- Kansas City, MO
+- St. Louis, MO
+- Springfield, MO
+- Independence, MO
+- Columbia, MO
+- Billings, MT
+- Missoula, MT
+- Great Falls, MT
+- Bozeman, MT
+- Butte, MT
+- Omaha, NE
+- Lincoln, NE
+- Bellevue, NE
+- Grand Island, NE
+- Kearney, NE
+- Las Vegas, NV
+- Henderson, NV
+- Reno, NV
+- North Las Vegas, NV
+- Sparks, NV
+- Manchester, NH
+- Nashua, NH
+- Concord, NH
+- Dover, NH
+- Rochester, NH
+- Newark, NJ
+- Jersey City, NJ
+- Paterson, NJ
+- Elizabeth, NJ
+- Edison, NJ
+- New York City, NY
+- Buffalo, NY
+- Rochester, NY
+- Yonkers, NY
+- Syracuse, NY
+- Charlotte, NC
+- Raleigh, NC
+- Greensboro, NC
+- Durham, NC
+- Winston-Salem, NC
+- Fargo, ND
+- Bismarck, ND
+- Grand Forks, ND
+- Minot, ND
+- West Fargo, ND
+- Columbus, OH
+- Cleveland, OH
+- Cincinnati, OH
+- Toledo, OH
+- Akron, OH
+- Oklahoma City, OK
+- Tulsa, OK
+- Norman, OK
+- Broken Arrow, OK
+- Lawton, OK
+- Portland, OR
+- Salem, OR
+- Eugene, OR
+- Gresham, OR
+- Hillsboro, OR
+- Philadelphia, PA
+- Pittsburgh, PA
+- Allentown, PA
+- Erie, PA
+- Reading, PA
+- Providence, RI
+- Warwick, RI
+- Cranston, RI
+- Pawtucket, RI
+- East Providence, RI
+- Columbia, SC
+- Charleston, SC
+- North Charleston, SC
+- Mount Pleasant, SC
+- Rock Hill, SC
+- Sioux Falls, SD
+- Rapid City, SD
+- Aberdeen, SD
+- Brookings, SD
+- Watertown, SD
+- Nashville, TN
+- Memphis, TN
+- Knoxville, TN
+- Chattanooga, TN
+- Clarksville, TN
+- Houston, TX
+- San Antonio, TX
+- Dallas, TX
+- Austin, TX
+- Fort Worth, TX
+- Salt Lake City, UT
+- West Valley City, UT
+- Provo, UT
+- West Jordan, UT
+- Orem, UT
+- Burlington, VT
+- South Burlington, VT
+- Rutland, VT
+- Barre, VT
+- Montpelier, VT
+- Virginia Beach, VA
+- Norfolk, VA
+- Chesapeake, VA
+- Richmond, VA
+- Newport News, VA
+- Seattle, WA
+- Spokane, WA
+- Tacoma, WA
+- Vancouver, WA
+- Bellevue, WA
+- Charleston, WV
+- Huntington, WV
+- Morgantown, WV
+- Parkersburg, WV
+- Wheeling, WV
+- Milwaukee, WI
+- Madison, WI
+- Green Bay, WI
+- Kenosha, WI
+- Racine, WI
+- Cheyenne, WY
+- Casper, WY
+- Laramie, WY
+- Gillette, WY
+- Rock Springs, WY
+search_distance: 25
+purveyor: owner
+min_year: 2012
+max_year: 2022
+min_miles: 17000
+max_miles: 140000
+max_ads: 99999

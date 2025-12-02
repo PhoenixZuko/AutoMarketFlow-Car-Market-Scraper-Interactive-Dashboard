@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Control</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2c2f33;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      color: #ffffff;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .dashboard {
+      background-color: #3e434a;
+      padding: 10px;
+      border-radius: 22px;
+      width: 380px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      width: 30%;  /* Lățimea va fi 30% din dimensiunea originală */
+    }
+
+    .dashboard h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #ffffff;
+      border-bottom: 2px solid #555;
+      padding-bottom: 10px;
+    }
+
+    .status {
+      font-size: 1.1em;
+      width: 96%;
+      font-weight: bold;
+      padding: 6px;
+      border-radius: 38px;
+      margin: 10px 0;
+      display: block;
+    }
+
+    .running {
+      background-color: #28a74533;
+      color: #28a745;
+      border: 1px solid #28a745;
+    }
+
+    .stopped {
+      background-color: #dc354533;
+      color: #dc3545;
+      border: 1px solid #dc3545;
+    }
+
+    form {
+      margin: 8px 0;
+    }
+
+    button {
+      width: 100%;
+      padding: 6px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .start-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .start-btn:hover {
+      background-color: #218838;
+    }
+
+    .stop-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .stop-btn:hover {
+      background-color: #c82333;
+    }
+
+    .extractor-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .extractor-btn:hover {
+      background-color: #0069d9;
+    }
+
+    @media (max-width: 850px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <script>
+function updateStatus(id, status) {
+  const el = document.getElementById(id);
+  el.textContent = id.includes('display') ? "Display: " + status : "Scraper: " + status;
+  if (id.includes('extractor')) el.textContent = "Extractor: " + status;
+
+  el.className = "status " + (status === "Running" ? "running" : "stopped");
+}
+
+setInterval(() => {
+  fetch("/status_update")
+    .then(response => response.json())
+    .then(data => {
+      updateStatus("facebook-status", data.facebook);
+      updateStatus("facebook-extractor-status", data.extractor);
+      updateStatus("facebook-display-status", data.display);
+      updateStatus("craiglist-status", data.craiglist);
+      updateStatus("craiglist-extractor-status", data.craiglist_extractor);
+    });
+}, 5000);
+</script>
+
+  <div class="container">
+<!-- Facebook Dashboard -->
+<div class="dashboard">
+  <h2>🔵 Facebook</h2>
+
+  <!-- Formular pentru salvarea configurării în JSON -->
+<p style="font-size: 0.9em; color: #ccc; background-color: #444; padding: 12px; border-radius: 8px; margin-top: -10px; margin-bottom: 15px;">
+  <strong>ℹ️ How it works:</strong><br>
+  <hr>
+  <ol style="margin-left: 20px; padding-left: 10px;">
+    <li>Select search parameters (State, Min Price, Max Price).</li>
+    <li>Click <strong>"💾Facebook-Save-Set Config"</strong> to save the settings.</li>
+    <li>Click <strong>"📘 Facebook -Generate YAML"</strong>to create file for the search.</li>
+  </ol>
+</p>
+<hr>
+<form method="POST" action="/save_facebook_config">
+  <label>State:</label>
+  <select name="state" required>
+    <option value="">-- Select --</option>
+    <option value="Alabama">Alabama</option>
+    <option value="Alaska">Alaska</option>
+    <option value="Arizona">Arizona</option>
+    <option value="Arkansas">Arkansas</option>
+    <option value="California">California</option>
+    <option value="Colorado">Colorado</option>
+    <option value="Connecticut">Connecticut</option>
+    <option value="Delaware">Delaware</option>
+    <option value="Florida">Florida</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Hawaii">Hawaii</option>
+    <option value="Idaho">Idaho</option>
+    <option value="Illinois">Illinois</option>
+    <option value="Indiana">Indiana</option>
+    <option value="Iowa">Iowa</option>
+    <option value="Kansas">Kansas</option>
+    <option value="Kentucky">Kentucky</option>
+    <option value="Louisiana">Louisiana</option>
+    <option value="Maine">Maine</option>
+    <option value="Maryland">Maryland</option>
+    <option value="Massachusetts">Massachusetts</option>
+    <option value="Michigan">Michigan</option>
+    <option value="Minnesota">Minnesota</option>
+    <option value="Mississippi">Mississippi</option>
+    <option value="Missouri">Missouri</option>
+    <option value="Montana">Montana</option>
+    <option value="Nebraska">Nebraska</option>
+    <option value="Nevada">Nevada</option>
+    <option value="New Hampshire">New Hampshire</option>
+    <option value="New Jersey">California</option>
+    <option value="New York">New York</option>
+    <option value="North Carolina">North Carolina</option>
+    <option value="North Dakota">North Dakota</option>
+    <option value="Ohio">Ohio</option>
+    <option value="Oklahoma">Oklahoma</option>
+    <option value="Oregon">Oregon</option>
+    <option value="Rhode Island">Rhode Island</option>
+    <option value="South Carolina">South Carolina</option>
+    <option value="South Dakota">South Dakota</option>
+    <option value="Tennessee">Tennessee</option>
+    <option value="Texas">Texas</option>
+    <option value="Utah">Utah</option>
+    <option value="Vermont">Vermont</option>
+    <option value="Virginia">Virginia</option>
+    <option value="Washington">Washington</option>
+    <option value="West Virginia">West Virginia</option>
+    <option value="Wisconsin">Wisconsin</option>
+    <option value="Wyoming">Wyoming</option>
+  </select>
+
+  <br><br>
+
+  <label>Price min:</label>
+  <input type="number" name="price_min" style="width: 90px;" value="3800">
+
+  <label>Price max:</label>
+  <input type="number" name="price_max" style="width: 90px;" value="14000">
+
+  <br><br>
+
+  <button type="submit" class="start-btn">1.💾 Facebook - Save-Set Config </button>
+</form>
+
+  <hr>
+
+  <!-- Formular pentru generare YAML (folosește datele salvate) -->
+  <form method="POST" action="/generate_yaml_facebook">
+    <button type="submit" class="start-btn">2.📘 Facebook - Generate YAML</button>
+  </form>
+
+<div class="status {{ 'running' if status == 'Running' else 'stopped' }}" id="facebook-status">
+  Scraper: {{ status }}
+</div>
+<div class="status {{ 'running' if extractor_status == 'Running' else 'stopped' }}" id="facebook-extractor-status">
+  Extractor: {{ extractor_status }}
+</div>
+<div class="status {{ 'running' if display_status == 'Running' else 'stopped' }}" id="facebook-display-status">
+  Display: {{ display_status }}
+</div>
+
+
+      <form method="POST" action="/start"><button class="start-btn">Start Scraper</button></form>
+      <form method="POST" action="/stop"><button class="stop-btn">Stop Scraper</button></form>
+      <form method="POST" action="/start_extractor"><button class="extractor-btn">Start Extractor</button></form>
+      <form method="POST" action="/start_display"><button class="start-btn">Start Display</button></form>
+    </div>
+
+<!-- Craiglist Dashboard -->
+<div class="dashboard">
+  <h2>🟣 Craiglist</h2>
+<p style="font-size: 0.9em; color: #ccc; background-color: #444; padding: 12px; border-radius: 8px; margin-top: -10px; margin-bottom: 15px;">
+  <strong>ℹ️ How it works:</strong><br>
+  <ol style="margin-left: 20px; padding-left: 10px;">
+    <li>Select the search parameters: <em>State</em>, <em>Year</em> and <em>Miles</em>.</li>
+    <li>Click <strong>💾Craiglist-Save-Set Config</strong>to save the settings.</li>
+    <li>Click <strong>📄Craiglist-Generate YAML</strong> to create the file for the search.</li>
+  </ol>
+</p>
+<hr>
+  <!-- FORMULAR DE SALVARE CONFIG CRAIG -->
+  <form method="POST" action="/save_craig_config">
+    <label>State:</label>
+    <select name="state" required>
+      <option value="">-- Select --</option>
+    <option value="Alabama">Alabama</option>
+    <option value="Alaska">Alaska</option>
+    <option value="Arizona">Arizona</option>
+    <option value="Arkansas">Arkansas</option>
+    <option value="California">California</option>
+    <option value="Colorado">Colorado</option>
+    <option value="Connecticut">Connecticut</option>
+    <option value="Delaware">Delaware</option>
+    <option value="Florida">Florida</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Hawaii">Hawaii</option>
+    <option value="Idaho">Idaho</option>
+    <option value="Illinois">Illinois</option>
+    <option value="Indiana">Indiana</option>
+    <option value="Iowa">Iowa</option>
+    <option value="Kansas">Kansas</option>
+    <option value="Kentucky">Kentucky</option>
+    <option value="Louisiana">Louisiana</option>
+    <option value="Maine">Maine</option>
+    <option value="Maryland">Maryland</option>
+    <option value="Massachusetts">Massachusetts</option>
+    <option value="Michigan">Michigan</option>
+    <option value="Minnesota">Minnesota</option>
+    <option value="Mississippi">Mississippi</option>
+    <option value="Missouri">Missouri</option>
+    <option value="Montana">Montana</option>
+    <option value="Nebraska">Nebraska</option>
+    <option value="Nevada">Nevada</option>
+    <option value="New Hampshire">New Hampshire</option>
+    <option value="New Jersey">California</option>
+    <option value="New York">New York</option>
+    <option value="North Carolina">North Carolina</option>
+    <option value="North Dakota">North Dakota</option>
+    <option value="Ohio">Ohio</option>
+    <option value="Oklahoma">Oklahoma</option>
+    <option value="Oregon">Oregon</option>
+    <option value="Rhode Island">Rhode Island</option>
+    <option value="South Carolina">South Carolina</option>
+    <option value="South Dakota">South Dakota</option>
+    <option value="Tennessee">Tennessee</option>
+    <option value="Texas">Texas</option>
+    <option value="Utah">Utah</option>
+    <option value="Vermont">Vermont</option>
+    <option value="Virginia">Virginia</option>
+    <option value="Washington">Washington</option>
+    <option value="West Virginia">West Virginia</option>
+    <option value="Wisconsin">Wisconsin</option>
+    <option value="Wyoming">Wyoming</option>
+      <!-- Adaugă alte state dacă vrei -->
+    </select>
+
+    <br><br>
+
+    <label>Year min:</label>
+    <input type="number" name="min_year" value="2012" style="width: 80px;">
+
+    <label>Year max:</label>
+    <input type="number" name="max_year" value="2022" style="width: 80px;">
+
+    <br><br>
+
+    <label>Miles min:</label>
+    <input type="number" name="min_miles" value="17000" style="width: 90px;">
+
+    <label>Miles max:</label>
+    <input type="number" name="max_miles" value="140000" style="width: 90px;">
+
+    <br><br>
+
+    <button type="submit" class="start-btn">1.💾 Craiglist - Save-Set Config</button>
+  </form>
+
+  <hr>
+
+  <!-- FORMULAR DE GENERARE YAML -->
+  <form method="POST" action="/generate_yaml_craiglist">
+    <button type="submit" class="start-btn">2.📄  Craiglist - Generate YAML</button>
+  </form>
+
+
+
+<div class="status {{ 'running' if craiglist_status == 'Running' else 'stopped' }}" id="craiglist-status">
+  Scraper: {{ craiglist_status }}
+</div>
+<div class="status {{ 'running' if craiglist_extractor_status == 'Running' else 'stopped' }}" id="craiglist-extractor-status">
+  Extractor: {{ craiglist_extractor_status }}
+</div>
+
+
+      <form method="POST" action="/start_craiglist"><button class="start-btn">Start Scraper</button></form>
+      <form method="POST" action="/stop_craiglist"><button class="stop-btn">Stop Scraper</button></form>
+      <form method="POST" action="/start_extractor_craiglist"><button class="extractor-btn">Start Extractor</button></form>
+        <form method="POST" action="/start_display"><button class="start-btn">Start Display</button></form>
+</div>
+    </div>
+  </div>
+</body>
+</html>

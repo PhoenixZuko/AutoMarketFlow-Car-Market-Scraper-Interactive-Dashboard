@@ -1,0 +1,135 @@
+type_car_mapping:
+  Sedan:
+    keywords: ["Sedan", "ES", "GS", "Accord", "Civic", "Altima", "Fusion", "300C", "Impala", "Sonata"]
+  Coupe:
+    keywords: ["Coupe", "Mustang", "Challenger", "CL-Class"]
+  SUV:
+    keywords: ["SUV", "Sport Utility", "Model X", "Outback"]
+  Truck:
+    keywords: ["Truck", "Pickup"]
+  Hatchback:
+    keywords: ["Hatchback", "Soul", "Hardtop"]
+  Wagon:
+    keywords: ["Wagon"]
+  Convertible:
+    keywords: ["Convertible"]
+  Van:
+    keywords: ["Van", "Minivan"]
+  Limo:
+    keywords: ["Limo"]
+  Unknown:
+    keywords: []  # Fallback category if no match
+
+scoring_rules_car:
+  year:
+    description: "Newer cars are preferred."
+    formula: "(2025 - year) * -0.5"
+    note: "The newer the car, the higher the score. Subtracts 0.5 points per year."
+
+  mileage:
+    description: "Lower mileage is better."
+    formula: "(200000 - mileage) / 20000"
+    note: "Lower mileage receives higher scores. 0 miles gives maximum 10 points."
+
+  price:
+    description: "Lower price is better up to a threshold."
+    max_price: 30000
+    formula: "max(0, (30000 - price) / 3000)"
+    note: "Cars priced below $30,000 get points. The lower the price, the better the score."
+
+  owner_count:
+    description: "Bonus for single-owner vehicles."
+    one_owner_bonus: 5
+    two_owners_bonus: 0
+    more_owners_penalty: -1
+    note: "Single-owner cars receive the highest bonus. More than two owners results in a penalty."
+
+  title_status:
+    description: "Clean title gives bonus, rebuilt is penalized."
+    clean_title_bonus: 5
+    rebuilt_title_penalty: -3
+    note: "Vehicles with clean titles earn more points. Rebuilt titles reduce score."
+
+  vin:
+    description: "Having a visible VIN number gives bonus."
+    vin_present_bonus: 5
+    note: "VIN presence adds credibility and boosts score."
+
+  nhtsa_safety_rating:
+    description: "Each safety star = 3 points."
+    formula: "nhtsa_rating * 3"
+    note: "NHTSA safety rating converted to score (each star = 3 points)."
+
+  description_analysis:
+    description: "Longer descriptions get bonus."
+    min_lines: 4
+    bonus_per_extra_line: 0.5
+    note: "More detailed descriptions earn bonus points after 4 lines."
+
+  description_keywords:
+    description: "Bonus for certain keywords in the car description."
+    keywords:
+      - word: "Excellent condition"
+        points: 2
+      - word: "Clean title"
+        points: 2
+      - word: "Runs excellent"
+        points: 2
+      - word: "GOOD CONDITION"
+        points: 2
+    note: "Specific keywords in the ad description add points."
+
+  listing_age:
+    description: "Old listings are penalized progressively."
+    penalties:
+      - days: 14
+        points: -1
+      - days: 21
+        points: -2
+      - days: 28
+        points: -3
+      - days: 35
+        points: -4
+    note: "The older the listing, the lower the score."
+
+  popular_brand:
+    description: "Bonus for popular and trusted car brands."
+    brands:
+      - Honda
+      - Toyota
+      - Ford
+      - Chevrolet
+      - Nissan
+      - Subaru
+    bonus: 2
+    note: "Popular and trusted brands receive bonus points."
+
+  transmission_type:
+    description: "Automatic cars are preferred."
+    automatic_bonus: 1
+    manual_penalty: 0
+    note: "Automatic transmission gets a small bonus."
+
+  fuel_type:
+    description: "Electric cars get bonus, diesel gets penalty."
+    electric_bonus: 1
+    diesel_penalty: 0
+    note: "Electric vehicles are favored slightly over diesel."
+
+  condition:
+    description: "General condition of the car."
+    excellent_bonus: 2
+    fair_bonus: 0
+    poor_penalty: -3
+    note: "Cars in excellent condition get a bonus; poor condition gets penalized."
+
+  paid_off:
+    description: "If fully paid, car gets bonus."
+    paid_off_bonus: 1
+    not_paid_penalty: -2
+    note: "Paid-off cars receive a small bonus. Financing gets a penalty."
+
+  no_damage:
+    description: "Bonus if car has no major damage."
+    no_damage_bonus: 2
+    note: "Cars without major damage earn extra points."

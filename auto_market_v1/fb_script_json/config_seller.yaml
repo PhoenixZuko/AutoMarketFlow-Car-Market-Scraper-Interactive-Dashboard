@@ -1,0 +1,20 @@
+year_now: 2025
+
+seller_score_rules:
+  no_rating:
+    current_year_penalty: -2    # cont nou, fără rating = risc
+    past_year_bonus: 2          # cont vechi, fără rating = bun
+  rated_user:
+    penalty_per_rating_point: -1  # penalizezi orice rating
+
+conclusion_ranges:
+  - min_score: 18
+    label: "Excellent"
+  - min_score: 14
+    label: "Good"
+  - min_score: 10
+    label: "Fair"
+  - min_score: 6
+    label: "Weak"
+  - min_score: 0
+    label: "Poor"

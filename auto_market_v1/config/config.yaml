@@ -1,0 +1,14 @@
+active_profile: hd
+
+profiles:
+  hd:
+    resolution: "1920,1080"
+    user_data_dir: "C:\\FB_Profile_HD"
+
+  mobile:
+    resolution: "375,812"
+    user_data_dir: "C:\\FB_Profile_Mobile"
+
+  tablet:
+    resolution: "768,1024"
+    user_data_dir: "C:\\FB_Profile_Tablet"

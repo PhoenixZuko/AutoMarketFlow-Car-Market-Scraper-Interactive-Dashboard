@@ -1,0 +1,40 @@
+# --- IGNORE BROWSER PROFILES ---
+chrome_profile/
+**/chrome_profile/
+**/session/
+auto_market_v1/session/
+
+# Chrome/LevelDB noise
+**/DevToolsActivePort
+**/*.ldb
+**/*.log
+**/LOG
+**/LOG.old
+**/CURRENT
+**/MANIFEST*
+**/LOCK
+
+# --- IGNORE PYTHON CACHE ---
+__pycache__/
+*.pyc
+*.pyo
+
+# --- IGNORE LOGS ---
+*.log
+
+# --- IGNORE SAVED SCRAPED PAGES ---
+saved_pages/
+
+# --- IGNORE ENVIRONMENTS ---
+env/
+venv/
+.venv/
+
+# --- IGNORE OS FILES ---
+.DS_Store
+Thumbs.db
+
+# --- IGNORE IDE FILES ---
+.vscode/
+.idea/
+*.iml
