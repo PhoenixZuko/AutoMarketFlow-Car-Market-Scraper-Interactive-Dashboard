@@ -5,7 +5,9 @@ https://www.youtube.com/watch?v=r5iQPuOCLUc
 Quick usage guide (how to configure location and price filters via YAML):
 https://www.youtube.com/watch?v=ir-ZJZGxOIQ
 
-
+For a step-by-step visual installation guide, you can watch this video:
+https://www.youtube.com/watch?v=bMTnO_YP_Go
+This short tutorial demonstrates how to install the application, configure dependencies, and complete the first-time setup.
 
 📝 Project Overview & Technical Background
 
@@ -144,11 +146,6 @@ Safe start/stop orchestration
 Multi-process coordination
 
 
-Installation Video
-
-For a step-by-step visual installation guide, you can watch this video:
-  ---> https://www.youtube.com/watch?v=bMTnO_YP_Go
-This short tutorial demonstrates how to install the application, configure dependencies, and complete the first-time setup.
 
 IMPORTANT: READ BEFORE RUNNING
 https://www.youtube.com/watch?v=bMTnO_YP_Go
