@@ -50198,5 +50198,653 @@
     },
     "scraped_date": "2025-12-03 00:28",
     "internal_id": "2025-12-03T00:28:09.892759"
+  },
+  {
+    "id": "1178769351060718",
+    "facebook_url": "https://www.facebook.com/marketplace/item/1178769351060718",
+    "title": "2019 Ford Explorer",
+    "price": 9000,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "South Elgin",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 105,000 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Blue · Interior color: Black",
+        "id_detail4": "5/5 overall NHTSA safety rating",
+        "id_detail5": "Fuel type: Flex",
+        "id_detail6": "1 owner",
+        "id_detail7": "This vehicle is paid off",
+        "id_detail8": "Clean title",
+        "id_detail9": "This vehicle has no significant damage or problems."
+      }
+    },
+    "seller_description": {
+      "id_description1": "**Water pump is replaced**(major failing part of explorer is replaced.",
+      "id_description2": "Clean title of this police interceptor.",
+      "id_description3": "No rust on the exterior.",
+      "id_description4": "Starts and runs like new.",
+      "id_description5": "Regularly maintained every 7k miles.",
+      "id_description6": "More interior photos are coming soon.",
+      "id_description7": "Text me for test drive in the snow to find out how well it can handle in bad weather. See less",
+      "id_description8": "South Elgin, IL"
+    },
+    "seller_information": {
+      "name": "Dhruv Patel",
+      "rating": 5,
+      "joined_facebook": "2010"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.048453"
+  },
+  {
+    "id": "1184220439874239",
+    "facebook_url": "https://www.facebook.com/marketplace/item/1184220439874239",
+    "title": "2005 Chevrolet suburban Sport Utility",
+    "price": 4500,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Chicago",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 240,000 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: White · Interior color: Tan",
+        "id_detail4": "Fuel type: Gasoline",
+        "id_detail5": "Clean title",
+        "id_detail6": "This vehicle has no significant damage or problems."
+      }
+    },
+    "seller_description": {
+      "id_description1": "The vehicle is in excellent running condition, with no mechanical issues, dashboard warning lights, or stored error codes. All components are original and fully functional. Recent maintenance includes the replacement of all brakes, rotors, and calipers. It also has a sunroof. See less",
+      "id_description2": "Chicago, IL"
+    },
+    "seller_information": {
+      "name": "Dion Lee",
+      "rating": null,
+      "joined_facebook": "2007"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.058460"
+  },
+  {
+    "id": "1355408976125437",
+    "facebook_url": "https://www.facebook.com/marketplace/item/1355408976125437",
+    "title": "2002 Toyota camry CE Sedan 4D",
+    "price": 1700,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Chicago",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 189,354 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Grey · Interior color: Grey",
+        "id_detail4": "Fuel type: Gasoline",
+        "id_detail5": "2 owners",
+        "id_detail6": "Clean title",
+        "id_detail7": "This vehicle has no significant damage or problems."
+      }
+    },
+    "seller_description": {
+      "id_description1": "Corre y conduce muy bien , título limpio , sin fallas mecánicas , solo quiero renovar mi auto por uno más nuevo , pero el auto está excelentes condiciones muy confiable See less",
+      "id_description2": "See translation",
+      "id_description3": "Chicago, IL"
+    },
+    "seller_information": {
+      "name": "Jesus Roldán Roldán",
+      "rating": 22,
+      "joined_facebook": "2016"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.067468"
+  },
+  {
+    "id": "1415001146876291",
+    "facebook_url": "https://www.facebook.com/marketplace/item/1415001146876291",
+    "title": "2012 Mazda mazda5 Touring Minivan 4D",
+    "price": 2500,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Deerfield",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 205,000 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Silver · Interior color: Black",
+        "id_detail4": "Safety rating",
+        "id_detail5": "Fuel type: Gasoline",
+        "id_detail6": "21.0 MPG city · 28.0 MPG highway · 24.0 MPG combined",
+        "id_detail7": "Clean title",
+        "id_detail8": "This vehicle has no significant damage or problems."
+      }
+    },
+    "seller_description": {
+      "id_description1": "Very reliable mini (literally mini) van. 4 cylinders runs great fills up the tank with $25 bucks. Third row included sliding doors no lights on the dash clean title. Definitely a reliable car for the family. For more info inbox me. See less",
+      "id_description2": "Deerfield, IL"
+    },
+    "seller_information": {
+      "name": "David Tapia Tapia",
+      "rating": null,
+      "joined_facebook": "2013"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.075975"
+  },
+  {
+    "id": "1931912471017216",
+    "facebook_url": "https://www.facebook.com/marketplace/item/1931912471017216",
+    "title": "2001 Chevrolet camaro",
+    "price": 12999,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Elgin",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 88,371 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Green · Interior color: Grey",
+        "id_detail4": "Fuel type: Gasoline",
+        "id_detail5": "Clean title",
+        "id_detail6": "This vehicle has no significant damage or problems."
+      }
+    },
+    "seller_description": {
+      "id_description1": "CHEVROLET Camaro 2001",
+      "id_description2": "Elgin, IL"
+    },
+    "seller_information": {
+      "name": "Mike Spata",
+      "rating": null,
+      "joined_facebook": "2018"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.083974"
+  },
+  {
+    "id": "2081831905890696",
+    "facebook_url": "https://www.facebook.com/marketplace/item/2081831905890696",
+    "title": "2013 Infiniti jx35",
+    "price": 7500,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Chicago",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 17,200 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Grey · Interior color: Black",
+        "id_detail4": "This vehicle is paid off",
+        "id_detail5": "Clean title",
+        "id_detail6": "This vehicle has no significant damage or problems."
+      }
+    },
+    "seller_description": {
+      "id_description1": "Run and drive",
+      "id_description2": "Chicago, IL"
+    },
+    "seller_information": {
+      "name": "Corteze Williams",
+      "rating": 6,
+      "joined_facebook": "2024"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.093481"
+  },
+  {
+    "id": "2097742137712262",
+    "facebook_url": "https://www.facebook.com/marketplace/item/2097742137712262",
+    "title": "2007 Honda accord SE Sedan 4D",
+    "price": 4500,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Northbrook",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 198,000 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Silver · Interior color: Grey",
+        "id_detail4": "Fuel type: Gasoline",
+        "id_detail5": "21.0 MPG city · 31.0 MPG highway · 25.0 MPG combined",
+        "id_detail6": "1 owner",
+        "id_detail7": "This vehicle is paid off"
+      }
+    },
+    "seller_description": {
+      "id_description1": "Well maintained",
+      "id_description2": "Northbrook, IL"
+    },
+    "seller_information": {
+      "name": "Randi Romanek",
+      "rating": null,
+      "joined_facebook": "2008"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.103495"
+  },
+  {
+    "id": "2202668246928811",
+    "facebook_url": "https://www.facebook.com/marketplace/item/2202668246928811",
+    "title": "2013 Kia rio",
+    "price": 3495,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Cicero",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 169,058 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Silver · Interior color: Black",
+        "id_detail4": "Fuel type: Gasoline",
+        "id_detail5": "Clean title",
+        "id_detail6": "This vehicle has no significant damage or problems."
+      }
+    },
+    "seller_description": {
+      "id_description1": "Kia Rio 2013",
+      "id_description2": "Cicero, IL"
+    },
+    "seller_information": {
+      "name": "Konrad Dobroliński",
+      "rating": null,
+      "joined_facebook": "2011"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.113500"
+  },
+  {
+    "id": "2248707282294089",
+    "facebook_url": "https://www.facebook.com/marketplace/item/2248707282294089",
+    "title": "2012 Toyota prius c",
+    "price": 6000,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Chicago",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 147,300 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Red · Interior color: Black",
+        "id_detail4": "Fuel type: Hybrid",
+        "id_detail5": "Clean title",
+        "id_detail6": "This vehicle has no significant damage or problems."
+      }
+    },
+    "seller_description": {
+      "id_description1": "I am selling a nice Prius, excellent inside and out, engine and transmission tested, very economical in fuel, 6000 obo",
+      "id_description2": "See less",
+      "id_description3": "Chicago, IL"
+    },
+    "seller_information": {
+      "name": "Cesar Andres",
+      "rating": null,
+      "joined_facebook": "2010"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.123005"
+  },
+  {
+    "id": "2304037696675981",
+    "facebook_url": "https://www.facebook.com/marketplace/item/2304037696675981",
+    "title": "2012 Land Rover range rover sport HSE Luxury",
+    "price": 7900,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Morton Grove",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 104,174 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Black · Interior color: Black",
+        "id_detail4": "Fuel type: Gasoline",
+        "id_detail5": "1 owner",
+        "id_detail6": "This vehicle is paid off",
+        "id_detail7": "Clean title",
+        "id_detail8": "This vehicle has no significant damage or problems."
+      }
+    },
+    "seller_description": {
+      "id_description1": "Hi I’m selling my 2012 Range Rover Sport",
+      "id_description2": "It’s got 104k miles currently",
+      "id_description3": "Runs and drives absolutely perfect without issues",
+      "id_description4": "It’s fully loaded with every option including Full leather heated seats, sunroof, Harmon kardan sound system, backup camera and much more",
+      "id_description5": "New tires, brakes and full tune up in the last 3 months",
+      "id_description6": "Asking 7900",
+      "id_description7": "Clean private title in hand See less",
+      "id_description8": "Morton Grove, IL"
+    },
+    "seller_information": {
+      "name": "Suleiman Nisar",
+      "rating": 18,
+      "joined_facebook": "2010"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.134515"
+  },
+  {
+    "id": "25456813047282338",
+    "facebook_url": "https://www.facebook.com/marketplace/item/25456813047282338",
+    "title": "2011 Honda odyssey LX Minivan 4D",
+    "price": 7400,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Evergreen Park",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 100,000 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Grey · Interior color: Grey",
+        "id_detail4": "5/5 overall NHTSA safety rating",
+        "id_detail5": "Fuel type: Gasoline",
+        "id_detail6": "18.0 MPG city · 27.0 MPG highway · 21.0 MPG combined",
+        "id_detail7": "2 owners",
+        "id_detail8": "This vehicle is paid off"
+      }
+    },
+    "seller_description": {
+      "id_description1": "This minivan truly runs very nice, with",
+      "id_description2": "Beautiful leather interior third row seating",
+      "id_description3": "Cameras alarm . Real decent honda product. Odyssey is available today. Best to probably call See less",
+      "id_description4": "Evergreen Park, IL"
+    },
+    "seller_information": {
+      "name": "Frank Iovino",
+      "rating": 9,
+      "joined_facebook": "2018"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.145028"
+  },
+  {
+    "id": "2639304823108327",
+    "facebook_url": "https://www.facebook.com/marketplace/item/2639304823108327",
+    "title": "2015 Mercedes-Benz c-class C 300 4MATIC Luxury Sedan 4D",
+    "price": 8999,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Chicago",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 115,000 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Black · Interior color: Tan",
+        "id_detail4": "Fuel type: Gasoline",
+        "id_detail5": "2 owners",
+        "id_detail6": "This vehicle is paid off",
+        "id_detail7": "Clean title",
+        "id_detail8": "This vehicle has no significant damage or problems."
+      }
+    },
+    "seller_description": {
+      "id_description1": "Mercedes Benz C 300 2015",
+      "id_description2": "Clean title no issues",
+      "id_description3": "No lights on no noise",
+      "id_description4": "Engine transmission strong",
+      "id_description5": "Price firm",
+      "id_description6": "Serious buyer only See less",
+      "id_description7": "Chicago, IL"
+    },
+    "seller_information": {
+      "name": "Serlux Chi",
+      "rating": 19,
+      "joined_facebook": "2024"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.156042"
+  },
+  {
+    "id": "853682653732068",
+    "facebook_url": "https://www.facebook.com/marketplace/item/853682653732068",
+    "title": "2013 Audi q5 3.0t quattro premium plus awd 4dr suv",
+    "price": 9995,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Joliet",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 94,267 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Grey · Interior color: Beige",
+        "id_detail4": "Fuel type: Gasoline",
+        "id_detail5": "Excellent condition",
+        "id_detail6": "Clean title",
+        "id_detail7": "This vehicle has no significant damage or problems."
+      }
+    },
+    "seller_description": {
+      "id_description1": "Brand New Front and Back Brakes!! V6 Supercharged!! Premium Plus!! S Line!! Bluetooth!! AWD!! Navigation!! Back Up Camera and Sensors!! See less",
+      "id_description2": "Joliet, IL"
+    },
+    "seller_information": {
+      "name": "Mi An",
+      "rating": null,
+      "joined_facebook": "2009"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.166055"
+  },
+  {
+    "id": "874278668460428",
+    "facebook_url": "https://www.facebook.com/marketplace/item/874278668460428",
+    "title": "2009 Ford focus SE Sedan 4D",
+    "price": 2400,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Cicero",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 150,000 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Blue · Interior color: Grey",
+        "id_detail4": "Fuel type: Gasoline",
+        "id_detail5": "24.0 MPG city · 33.0 MPG highway · 27.0 MPG combined",
+        "id_detail6": "Clean title",
+        "id_detail7": "This vehicle has no significant damage or problems."
+      }
+    },
+    "seller_description": {
+      "id_description1": "El auto es muy confiable y económico de gasolina , precio a tratar",
+      "id_description2": "See translation",
+      "id_description3": "Cicero, IL"
+    },
+    "seller_information": {
+      "name": "Keivin Reyes",
+      "rating": null,
+      "joined_facebook": "2022"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.175065"
+  },
+  {
+    "id": "881811607607173",
+    "facebook_url": "https://www.facebook.com/marketplace/item/881811607607173",
+    "title": "2017 Ford edge",
+    "price": 9499,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Cicero",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 147,072 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Burgundy · Interior color: Black",
+        "id_detail4": "Fuel type: Gasoline",
+        "id_detail5": "Clean title",
+        "id_detail6": "This vehicle has no significant damage or problems."
+      }
+    },
+    "seller_description": {
+      "id_description1": "Ford Edge 2017",
+      "id_description2": "Cicero, IL"
+    },
+    "seller_information": {
+      "name": "Konrad Dobroliński",
+      "rating": null,
+      "joined_facebook": "2011"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.184566"
+  },
+  {
+    "id": "886588270371394",
+    "facebook_url": "https://www.facebook.com/marketplace/item/886588270371394",
+    "title": "2017 Ford escape",
+    "price": 4900,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Hines",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 110,100 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Gold · Interior color: Black",
+        "id_detail4": "Fuel type: Gasoline",
+        "id_detail5": "This vehicle is paid off"
+      }
+    },
+    "seller_description": {
+      "id_description1": "Ford Escape 2017 S FWD 4D suv de 4 cilindros, en excelentes condiciones, puede traer a su mecánico.",
+      "id_description2": "See translation",
+      "id_description3": "Hines, IL"
+    },
+    "seller_information": {
+      "name": "Susana Rodríguez",
+      "rating": null,
+      "joined_facebook": "2017"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.194083"
+  },
+  {
+    "id": "888617233501221",
+    "facebook_url": "https://www.facebook.com/marketplace/item/888617233501221",
+    "title": "2011 Kia sorento",
+    "price": 5995,
+    "currency": "$",
+    "listed_since": null,
+    "location": {
+      "city": "Chicago",
+      "state": "IL"
+    },
+    "vehicle_details": {
+      "details": {
+        "id_detail1": "Driven 143,465 miles",
+        "id_detail2": "Automatic transmission",
+        "id_detail3": "Exterior color: Red · Interior color: Beige",
+        "id_detail4": "Fuel type: Gasoline",
+        "id_detail5": "Clean title",
+        "id_detail6": "This vehicle has no significant damage or problems."
+      }
+    },
+    "seller_description": {
+      "id_description1": "Chicago, IL"
+    },
+    "seller_information": {
+      "name": "Edwin Adorno",
+      "rating": null,
+      "joined_facebook": "2011"
+    },
+    "business_details": {
+      "details": null
+    },
+    "scraped_date": "2025-12-03 00:58",
+    "internal_id": "2025-12-03T00:58:42.203095"
   }
 ]

@@ -1,40 +1,51 @@
-# --- IGNORE BROWSER PROFILES ---
+# ======================
+#  AutoMarketFlow PROJECT IGNORE RULES
+# ======================
+
+# --- BROWSER / SELENIUM PROFILE ---
 chrome_profile/
 **/chrome_profile/
 **/session/
-auto_market_v1/session/
-
-# Chrome/LevelDB noise
+**/Local Storage/
+**/Session Storage/
+**/Cache/
+**/blob_storage/
+**/leveldb/
+**/GPUCache/
+**/DawnWebGPUCache/
 **/DevToolsActivePort
-**/*.ldb
-**/*.log
-**/LOG
-**/LOG.old
-**/CURRENT
-**/MANIFEST*
-**/LOCK
+**/chrome_debug.log
 
-# --- IGNORE PYTHON CACHE ---
+# --- GENERATED SCRAPING DATA ---
+saved_pages/
+processed_pages/
+craig_saved_pages/
+craig_proccesed_pages/
+craig_script_json/craig_script_json/
+temp/
+
+# --- PYTHON CACHE ---
 __pycache__/
 *.pyc
 *.pyo
 
-# --- IGNORE LOGS ---
+# --- LOG FILES ---
 *.log
+logs/
 
-# --- IGNORE SAVED SCRAPED PAGES ---
-saved_pages/
-
-# --- IGNORE ENVIRONMENTS ---
+# --- ENVIRONMENTS ---
 env/
 venv/
 .venv/
 
-# --- IGNORE OS FILES ---
+# --- OS SPECIFIC ---
 .DS_Store
 Thumbs.db
 
-# --- IGNORE IDE FILES ---
+# --- IDE FILES ---
 .vscode/
 .idea/
 *.iml
+
+# --- BUILD / INSTALLER ---
+AutoMarket_Installer_Pack/
