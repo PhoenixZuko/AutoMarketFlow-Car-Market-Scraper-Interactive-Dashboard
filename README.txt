@@ -1,27 +1,29 @@
-
 Video & Tutorials
-Full presentation (overview of the project + features + workflow):
-https://www.youtube.com/watch?v=r5iQPuOCLUc
-Quick usage guide (how to configure location and price filters via YAML):
-https://www.youtube.com/watch?v=ir-ZJZGxOIQ
+ Full Presentation — Project Overview
+A complete walkthrough covering architecture, features, workflow, and real usage:
+👉 https://www.youtube.com/watch?v=r5iQPuOCLUc
 
-For a step-by-step visual installation guide, you can watch this video:
-https://www.youtube.com/watch?v=bMTnO_YP_Go
-This short tutorial demonstrates how to install the application, configure dependencies, and complete the first-time setup.
+ Quick Usage Guide (YAML Configuration)
+How to set location and price ranges directly through the YAML configuration file:
+👉 https://www.youtube.com/watch?v=ir-ZJZGxOIQ
+
+ Installation Guide — Step-by-Step
+A short tutorial showing the installation process, dependency setup, and first-time initialization:
+👉 https://www.youtube.com/watch?v=bMTnO_YP_Go
+
+📬 Contact
+For usage requests, technical questions, or collaboration opportunities, feel free to reach out:
+ https://vorte.eu/contact
 
 📝 Project Overview & Technical Background
 
 This application was developed for a small automotive company that specialized in sourcing and reselling used vehicles. A core part of their workflow involved monitoring online marketplaces and identifying valuable listings quickly and accurately. To support this process, a dedicated automation system was designed to run locally on the client’s workstation, ensuring both performance and data privacy.
-
 The solution integrates several controlled components working together as a unified flow:
-
 ✔ Local-Only Execution (No Cloud Dependencies)
-
 The entire system operates on the user’s laptop, using a controlled Chrome profile, local storage, and a custom dashboard.
 This eliminates external dependencies and ensures predictable performance in a closed environment.
 
 ✔ Automated Browser-Based Workflow
-
 A Selenium-driven engine handles real-time interaction with Facebook Marketplace, including:
 navigation through categories
 setting filters (location, radius, price, etc.)
