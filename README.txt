@@ -263,6 +263,10 @@ auto_marketflow/
     ├── helpers.py
     └── constants.py
 
+
+The system was designed as a fully self-contained application that runs from a single deployment folder.
+This architectural choice was intentional: the client had a limited budget and required a solution that could be installed, updated, and operated without DevOps, server infrastructure, or external services.
+By packaging automation, data processing, configuration, the local dashboard, and process orchestration into one structured directory, the solution delivers enterprise-level functionality while keeping operational cost and complexity close to zero
  
 C:.
 │   .gitignore
