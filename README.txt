@@ -263,6 +263,228 @@ auto_marketflow/
     ├── helpers.py
     └── constants.py
 
+Volume serial number is 02DD-5D6D
+C:.
+│   alfa_craigslist.py
+│   alfa_facebook.py
+│   config.yaml
+│   config_seller.yaml
+│   craiglist_pid.txt
+│   craig_extract_json.py
+│   fb_extract_json.py
+│   INSTALL.md
+│   login_first_time.py
+│   program_pid.txt
+│   requirements.txt
+│
+├───config
+│   │   config.yaml
+│   │   craigslist.yaml
+│   │   facebook.yaml
+│   │
+│   └───yaml_generator
+│       │   craigslist_yaml_generator.py
+│       │   craig_config_writer.py
+│       │   fb_config_writer.py
+│       │   fb_yaml_generator.py
+│       │
+│       └───data
+│               craig_form_data.json
+│               fb_form_data.json
+│               state_city_clean.json
+│
+├───craigslist
+│       scraper.py
+│
+├───craig_script_json
+│       cars_tabulator.py
+│       converted_craiglist_with_extras.json
+│       convert_craigslist_to_standard.py
+│       convert_flags_for_craig.py
+│       craiglist_clean_json.json
+│       craiglist_json.json
+│       craig_clean_json.py
+│       craig_with_flags_final.json
+│       update_tabulator_data.py
+│       __init__.py
+│
+├───dashboard_craiglist
+│       craiglist_pid.txt
+│       program_pid.txt
+│       start_craiglist.py
+│       start_extract_json_craiglist.py
+│       start_generate_yaml_craig.py
+│       stop_craiglist.py
+│
+├───dashboard_facebook
+│       cmd_pid.txt
+│       program_pid.txt
+│       start_extract_json.py
+│       start_faceboock.py
+│       start_generator_yaml_fb.py
+│       stop_facebook.py
+│
+├───facebook
+│       auto_scroll.py
+│       chrome_cleanup.py
+│       clean_session.py
+│       facebook_task_extractor.py
+│       file_checker.py
+│       navigation.py
+│       search_loader.py
+│       set_location_filter.py
+│       visited_tracker.py
+│
+├───fb_script_json
+│       all_data.json
+│       calculate_rating_seller.py
+│       clean_emoticone.py
+│       config.yaml
+│       config_seller.yaml
+│       positive_flags.py
+│       rating_json.py
+│       structure_data.py
+│       tubulator.py
+│
+└───tubulator_display
+        cars_tabulator.json
+        cars_tabulator_craig.json
+        cars_tabulator_fb.json
+        update_tabulator_data.py
+
+
+
+C:.
+│   .gitignore
+│   dasboard.py
+│   first_time_facebook_login.bat
+│   README.txt
+│   requirements.txt
+│   setup_environment.py
+│   START_CLICK_HERE.bat
+│   sumary_readME.txt
+│
+├───auto_market_v1
+│   │   alfa_craigslist.py
+│   │   alfa_facebook.py
+│   │   config.yaml
+│   │   config_seller.yaml
+│   │   craiglist_pid.txt
+│   │   craig_extract_json.py
+│   │   fb_extract_json.py
+│   │   INSTALL.md
+│   │   login_first_time.py
+│   │   program_pid.txt
+│   │   requirements.txt
+│   │
+│   ├───config
+│   │   │   config.yaml
+│   │   │   craigslist.yaml
+│   │   │   facebook.yaml
+│   │   │
+│   │   └───yaml_generator
+│   │       │   craigslist_yaml_generator.py
+│   │       │   craig_config_writer.py
+│   │       │   fb_config_writer.py
+│   │       │   fb_yaml_generator.py
+│   │       │
+│   │       └───data
+│   │               craig_form_data.json
+│   │               fb_form_data.json
+│   │               state_city_clean.json
+│   │
+│   ├───craigslist
+│   │       scraper.py
+│   │
+│   ├───craig_script_json
+│   │       cars_tabulator.py
+│   │       converted_craiglist_with_extras.json
+│   │       convert_craigslist_to_standard.py
+│   │       convert_flags_for_craig.py
+│   │       craiglist_clean_json.json
+│   │       craiglist_json.json
+│   │       craig_clean_json.py
+│   │       craig_with_flags_final.json
+│   │       update_tabulator_data.py
+│   │       __init__.py
+│   │
+│   ├───dashboard_craiglist
+│   │       craiglist_pid.txt
+│   │       program_pid.txt
+│   │       start_craiglist.py
+│   │       start_extract_json_craiglist.py
+│   │       start_generate_yaml_craig.py
+│   │       stop_craiglist.py
+│   │
+│   ├───dashboard_facebook
+│   │       cmd_pid.txt
+│   │       program_pid.txt
+│   │       start_extract_json.py
+│   │       start_faceboock.py
+│   │       start_generator_yaml_fb.py
+│   │       stop_facebook.py
+│   │
+│   ├───facebook
+│   │       auto_scroll.py
+│   │       chrome_cleanup.py
+│   │       clean_session.py
+│   │       facebook_task_extractor.py
+│   │       file_checker.py
+│   │       navigation.py
+│   │       search_loader.py
+│   │       set_location_filter.py
+│   │       visited_tracker.py
+│   │
+│   ├───fb_script_json
+│   │       all_data.json
+│   │       calculate_rating_seller.py
+│   │       clean_emoticone.py
+│   │       config.yaml
+│   │       config_seller.yaml
+│   │       positive_flags.py
+│   │       rating_json.py
+│   │       structure_data.py
+│   │       tubulator.py
+│   │
+│   └───tubulator_display
+│           cars_tabulator.json
+│           cars_tabulator_craig.json
+│           cars_tabulator_fb.json
+│           update_tabulator_data.py
+│
+├───display
+│   │   display.py
+│   │   routes.py
+│   │
+│   ├───data
+│   │       cars_tabulator.json
+│   │       cars_tabulator_temp.json
+│   │
+│   ├───static
+│   │   └───media
+│   │       ├───css
+│   │       │       datatables.min.css
+│   │       │       jquery.dataTables.min.css
+│   │       │       tabulator.min.css
+│   │       │
+│   │       └───js
+│   │               jquery.min.js
+│   │               tabulator.min.js
+│   │
+│   ├───templates
+│   │   │   index.html
+│   │   │
+│   │   └───partials
+│   │           table.html
+│   │
+│   └───utils
+│           cars.json
+│           processor.py
+│
+└───templates
+        index.html
+
+
 ⚠️ Legal Notice
 
 This software automates browser actions exactly as a human user.
