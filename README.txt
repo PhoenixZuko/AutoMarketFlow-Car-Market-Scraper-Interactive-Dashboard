@@ -1,3 +1,44 @@
+## Design Notes & Project Constraints
+
+This project was developed under strict client requirements. The system had to operate entirely on the user’s local machine, avoid cloud dependencies, and remain fully transparent during execution. All architectural choices were made to align with these constraints.
+
+### 🔒 1. Fully Local Execution (No Cloud Services)
+The client requested a solution that runs 100% locally with:
+- no external APIs or remote servers,
+- no background system modifications,
+- no interference with other applications,
+- complete data privacy.
+
+To ensure this, the system uses an isolated Chrome profile, local storage, local process orchestration, and a self-contained runtime environment. This design guarantees predictable, stable, and privacy-preserving operation.
+
+### 👁️ 2. Real-Time, Supervised Browser Interaction
+Another core requirement was that all automation must be visible and behave like a human user.  
+The system therefore:
+- performs navigation in real time,
+- respects natural browser delays,
+- avoids high-speed scraping,
+- executes only actions observable to the user.
+
+This ensures platform-compliant behaviour and prevents unintended automated patterns.
+
+### 💰 3. Architecture Optimized for Client Budget
+The client required a robust tool without the overhead of DevOps, servers, or cloud infrastructure.  
+To meet this constraint, the solution bundles:
+- automation logic,
+- configuration,
+- dashboard UI,
+- data processing pipeline,
+
+into a single deployable folder. This reduces complexity while maintaining enterprise-grade functionality.
+
+---
+
+This design reflects a balance between technical capability, transparency, platform safety, and the practical constraints defined by the client.
+
+
+
+
+
 Video & Tutorials
  Full Presentation — Project Overview
 A complete walkthrough covering architecture, features, workflow, and real usage:
