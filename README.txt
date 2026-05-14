@@ -23,13 +23,23 @@ The platform combines controlled browser automation, ETL-style processing, seman
 
 ## Technology Stack
 
+### Backend & Automation
 - Python
 - Selenium
 - Flask
-- Tabulator.js
 - YAML configuration
-- Chrome automation
-- Local ETL workflows
+- ETL workflows
+
+### Frontend & Dashboard
+- Flask templates
+- HTML / CSS / JavaScript
+- Tabulator.js
+
+### System Integration
+- Windows 11
+- Process management
+- Local browser orchestration
+- Persistent Chrome profiles
 
 ---
 
@@ -45,49 +55,90 @@ ETL Processing
 Classification & Analysis
         ↓
 Dashboard Visualization
-Demo Videos
-Full Presentation
+```
 
+---
+
+## Main Capabilities
+
+- automated listing extraction
+- configurable search filters
+- semantic text analysis
+- persistent login sessions
+- real-time monitoring dashboard
+- safe concurrent execution
+- local-only processing
+
+---
+
+## Demo Videos
+
+### Full Presentation
 https://www.youtube.com/watch?v=r5iQPuOCLUc
 
-YAML Configuration
-
+### YAML Configuration
 https://www.youtube.com/watch?v=ir-ZJZGxOIQ
 
-Installation Guide
-
+### Installation Guide
 https://www.youtube.com/watch?v=bMTnO_YP_Go
 
-Main Capabilities
-automated listing extraction
-configurable search filters
-semantic text analysis
-persistent login sessions
-real-time monitoring dashboard
-safe concurrent execution
-local-only processing
-Quick Start
+---
+
+## Quick Start
+
+### Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
+
+### Start Application
+
+```bash
 python main.py
-Documentation
+```
 
-Additional technical documentation is available inside the DOCUMENTATION/ folder.
+---
 
-Topics include:
+## Repository Structure
 
-installation
-YAML configuration
-architecture notes
-dashboard usage
-ETL workflow
-troubleshooting
-Legal Notice
+```text
+auto_marketflow/
+│
+├── main.py
+├── config/
+├── scraping/
+├── dashboard/
+├── parsing/
+├── utils/
+└── templates/
+```
+
+---
+
+## Documentation
+
+Additional technical documentation is available inside the `DOCUMENTATION/` folder.
+
+Included topics:
+- installation
+- YAML configuration
+- dashboard usage
+- ETL workflow
+- troubleshooting
+- architecture notes
+
+---
+
+## Legal Notice
 
 This software automates browser interaction through standard Chrome automation workflows and does not bypass platform security mechanisms or private APIs.
 
 Users remain responsible for complying with platform terms and applicable local laws.
 
-Author
+---
+
+## Author
 
 Andrei Sorin Stefan
 
